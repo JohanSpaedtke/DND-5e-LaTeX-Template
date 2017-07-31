@@ -1,0 +1,163 @@
+% Changing book to article will make the footers match on each page,
+% rather than alternate every other.
+%
+% Note that the article class does not have chapters.
+\documentclass[10pt,twoside,twocolumn,openany]{book}
+\usepackage[bg-print]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\widowpenalties 1 10000
+\raggedbottom
+\raggedright
+
+\usepackage{color}
+\definecolor{reaction}{RGB}{255,127,0}
+\definecolor{bonusaction}{RGB}{255,0,127}
+\definecolor{action}{RGB}{0,255,127}
+\definecolor{long}{RGB}{0,127,255}
+\definecolor{ritual}{RGB}{127,0,255}
+\definecolor{cost}{RGB}{127,255,0}
+
+% Start document
+\begin{document}
+%\fontfamily{ppl}\selectfont % Set text font
+
+\chapter{Critters}
+\section{CR 0}
+\begin{monsterboxnobg}{Bat}
+	\textit{Tiny beast, unaligned}\\
+	\hline
+	\basics[%
+	armorclass = 12,
+	hitpoints  = 1 (1d4 - 1),
+	speed      = {5 ft., fly 30 ft.}
+	]
+	\hline
+	\stats[
+    STR = \stat{2}, % This stat command will autocomplete the modifier for you
+    DEX = \stat{15},
+    CON = \stat{8},
+    INT = \stat{2},
+    WIS = \stat{12},
+    CHA = \stat{4}
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	senses = {blindsight 60 ft., passive Perception 11},
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Echolocation]
+		While it can't hear, the bat has no blindsight.
+	\end{monsteraction}
+	\\
+	\begin{monsteraction}[Keen Hearing]
+		The bat has advantage on Wisdom (Perception) checks that rely on hearing.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +0 to hit, reach 5ft., one creature. \textit{Hit:} 1 piercing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+\newpage
+\section{CR 1}
+\begin{monsterboxnobg}{Black Bear}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[%
+	armorclass = 11 (natural armor),
+	hitpoints  = 19 (3d8 + 6),
+	speed      = {40 ft., climb 30 ft.}
+	]
+	\hline
+	\stats[
+    STR = \stat{15}, % This stat command will autocomplete the modifier for you
+    DEX = \stat{10},
+    CON = \stat{14},
+    INT = \stat{2},
+    WIS = \stat{12},
+    CHA = \stat{7}
+	]
+	\hline
+	\details[%
+	% If you want to use commas in these sections, enclose the
+	% description in braces.
+	% I'm so sorry.
+	skills = Perception +3,
+	senses = passive Perception 11,
+	challenge = ?
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The bear has advantage on Wisdom (Perception) checks that rely on smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Multiattack]
+		The bear makes two attacks, one with its bite and one with its claws.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} 5 (1d6 + 2) piercing damage.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Claws]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} 1 (2d4 + 2) slashing damage.
+	\end{monsteraction}	
+\end{monsterboxnobg}
+
+\chapter{Spells}
+\section{Cantrips}
+\spell{Guidance}
+{Divination cantrip}
+{\color{action} 1 action}
+{Touch}
+{V, S}
+{Concentration, up to 1 minute}
+%
+You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends. 
+
+\spell{Thaumaturgy}
+{Transmutation cantrip}
+{\color{action} 1 action}
+{30 feet}
+{V}
+{Up to 1 minute}
+%
+You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:
+\begin{itemize}
+	\item Your voice booms up to three times as loud as normal for 1 minute.
+	\item You cause flames to flicker, brighten, dim, or change color for 1 minute.
+	\item You cause harmless tremors in the ground for 1 minute.
+	\item You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.
+	\item You instantaneously cause an unlocked door or win  dow to fly open or slam shut.
+	\item You alter the appearance of your eyes for 1 minute.
+\end{itemize}If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
+
+\newpage
+\section{Level 1}
+\spell{Bane}
+{1st-level enchantment}
+{\color{action} 1 action}
+{30 feet}
+{V, S, M (a drop of blood)}
+{Concentration, up to 1 minute}
+%
+Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.
+\textbf{\textit{At Higher Levels.}} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
+
+\newpage
+\section{Level 2}
+\spell{Aid}
+{2nd-level abjuration}
+{\color{action}1 action}
+{30 feet}
+{V, S, M (a tiny strip of white cloth)}
+{8 hours}
+%
+Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration.
+
+\textbf{\textit{At Higher Levels.}} When you cast this spell using
+a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd.
+
+\end{document}
