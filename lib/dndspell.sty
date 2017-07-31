@@ -1,0 +1,14 @@
+\usepackage[usestackEOL]{stackengine}
+\strutlongstacks{T}
+\newcommand\spell[6]{%
+	\subsection{#1}
+	\setstackgap{S}{0pt}%
+	\Shortstack[l]{%
+		\parbox{\linewidth}{\strut\textit{#2}\strut}\\
+		\parbox{\linewidth}{\strut\textbf{Casting Time:} #3}\\
+		\parbox{\linewidth}{\strut\textbf{Range:} #4\strut}\\
+		\parbox{\linewidth}{\strut\textbf{Components:} #5\strut}\\
+		\parbox{\linewidth}{\strut\textbf{Duration:} #6}
+		}%
+	\par\noindent\ignorespaces%
+}
