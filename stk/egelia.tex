@@ -15,7 +15,7 @@
 %makeindex egelia.cdx -o egelia.cnd 
 \newindex{cr}{cdx}{cnd}{By CR}
 
-\widowpenalties 1 10000
+%\widowpenalties 1 10000
 \raggedbottom
 
 \usepackage{color}
@@ -52,7 +52,7 @@
 %			Baboon			%
 %%%%%%%%%%%%%%%%%%	%
 \index{Baboon}
-\index[cr]{CR 0!Baboon}
+\index[cr]{0@CR 0!Baboon}
 \begin{monsterboxnobg}{Baboon}
 	\textit{Small beast, unaligned}\\
 	\hline
@@ -91,7 +91,7 @@
 %			Badger			%
 %%%%%%%%%%%%%%%%%%	%
 \index{Badger}
-\index[cr]{CR 0!Badger}
+\index[cr]{0@CR 0!Badger}
 \begin{monsterboxnobg}{Badger}
 	\textit{Tiny beast, unaligned}\\
 	\hline
@@ -129,6 +129,8 @@
 %%%%%%%%%%%%%%%%%%	%
 %			Cat				%
 %%%%%%%%%%%%%%%%%%	%
+\index{Cat}
+\index[cr]{0@CR 0!Cat}
 \begin{monsterboxnobg}{Cat}
 	\textit{Tiny beast, unaligned}\\
 	\hline
@@ -166,6 +168,8 @@
 %%%%%%%%%%%%%%%%%%	%
 %			Deer				%
 %%%%%%%%%%%%%%%%%%	%
+\index{Deer}
+\index[cr]{0@CR 0!Deer}
 \begin{monsterboxnobg}{Deer}
 	\textit{Medium beast, unaligned}\\
 	\hline
@@ -197,9 +201,12 @@
 	\end{monsteraction}
 \end{monsterboxnobg}
 
+\newpage
 %%%%%%%%%%%%%%%%%%	%
 %		Giant Fire Beetle		%
 %%%%%%%%%%%%%%%%%%	%
+\index{Giant Fire Beetle}
+\index[cr]{0@CR 0!Giant Fire Beetle}
 \begin{monsterboxnobg}{Giant Fire Beetle}
 	\textit{Small beast, unaligned}\\
 	\hline
@@ -235,10 +242,13 @@
 	
 	A \textbf{giant fire beetle} is a nocturnal creature that takes its name from a pair of glowing glands that give off light. Miners and adventurers prize these creatures. for a giant fire beetle's glands continue to shed light for 1d6 days after the beetle dies. Giant fire beetles are most commonly found underground and in dark forests.
 \end{monsterboxnobg}
+
 \newpage
 %%%%%%%%%%%%%%%%%%	%
 %			Goat 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Goat}
+\index[cr]{0@CR 0!Goat}
 \begin{monsterboxnobg}{Goat}
 	\textit{Medium beast, unaligned}\\
 	\hline
@@ -281,6 +291,8 @@
 %%%%%%%%%%%%%%%%%%	%
 %			Hyena 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Hyena}
+\index[cr]{0@CR 0!Hyena}
 \begin{monsterboxnobg}{Hyena}
 	\textit{Medium beast, unaligned}\\
 	\hline
@@ -318,6 +330,8 @@
 %%%%%%%%%%%%%%%%%%	%
 %			Jackal 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Jackal}
+\index[cr]{0@CR 0!Jackal}
 \begin{monsterboxnobg}{Jackal}
 	\textit{Small beast, unaligned}\\
 	\hline
@@ -359,6 +373,8 @@
 %%%%%%%%%%%%%%%%%%	%
 %			Lizard 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Lizard}
+\index[cr]{0@CR 0!Lizard}
 \begin{monsterboxnobg}{Lizard}
 	\textit{Tiny beast, unaligned}\\
 	\hline
@@ -390,9 +406,12 @@
 	\end{monsteraction}
 \end{monsterboxnobg}
 
+\newpage
 %%%%%%%%%%%%%%%%%%	%
 %			Rat	 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Rat}
+\index[cr]{0@CR 0!Rat}
 \begin{monsterboxnobg}{Rat}
 	\textit{Tiny beast, unaligned}\\
 	\hline
@@ -430,41 +449,217 @@
 %%%%%%%%%%%%%%%%%%	%
 %		 	Scorpion 			%
 %%%%%%%%%%%%%%%%%%	%
-Scorpion
-
+\index{Scorpion}
+\index[cr]{0@CR 0!Scorpion}
+\begin{monsterboxnobg}{Scorpion}
+	\textit{Tiny beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 11 (natural armor),
+		hitpoints 		= \dice{1d4 - 1},
+		speed		= {10 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{2},
+		DEX	= \stat{11},
+		CON	= \stat{8},
+		INT	= \stat{1},
+		WIS	= \stat{8},
+		CHA	= \stat{2}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses 		= {blindsight 10 ft., passive Perception 9},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Sting]
+		\textit{Melee Weapon Attack:} +2 to hit, reach 5ft., one creature. \textit{Hit:} 1 piercing damage, and the target must make a DC 9 Constitution saving throw, taking \dice{1d8} poison damage on a failed save, or half as much damage on a successful one.
+	\end{monsteraction}
+\end{monsterboxnobg}
+\newpage
 %%%%%%%%%%%%%%%%%%	%
 %			Spider 			%
 %%%%%%%%%%%%%%%%%%	%
-Spider
+\index{Spider}
+\index[cr]{0@CR 0!Spider}
+\begin{monsterboxnobg}{Spider}
+	\textit{Tiny beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints 		= \dice{1d4 - 1},
+		speed		= {20 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{2},
+		DEX	= \stat{14},
+		CON	= \stat{8},
+		INT	= \stat{1},
+		WIS	= \stat{10},
+		CHA	= \stat{2}
+	]
+	\hline
+	\details[
+		skills			= {Stealth +4},
+		senses 		= {darkvision 30 ft., passive Perception 10},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Spider Climb]
+		The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Web Sense]
+		While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Web Walker]
+		The spider ignores movement restrictions caused by webbing.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one creature. \textit{Hit:} 1 piercing damage, and the target must succeed on a DC 9 Constitution saving throw or take \dice{1d4} poison damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Weasel 			%
 %%%%%%%%%%%%%%%%%%	%
-Weasel
-\newpage
+\index{Weasel}
+\index[cr]{0@CR 0!Weasel}
+\begin{monsterboxnobg}{Weasel}
+	\textit{Tiny beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 13,
+		hitpoints 		= \dice{1d4 - 1},
+		speed		= {30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{3},
+		DEX	= \stat{16},
+		CON	= \stat{8},
+		INT	= \stat{2},
+		WIS	= \stat{12},
+		CHA	= \stat{3}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3, Stealth +5},
+		senses 		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Hearing and Smell]
+		The weasel has aclvantage on llisdom (Perception) checks that rely on hearing or smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5ft., one target. \textit{Hit:} 1 piercing damage
+	\end{monsteraction}
+\end{monsterboxnobg}
+\clearpage
 \section{CR 1/8}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Giant rat 			%
 %%%%%%%%%%%%%%%%%%	%
 \index{Giant rat}
-\index[cr]{CR 1/8!Giant rat}
-Giant rat
+\index[cr]{1@CR 1/8!Giant rat}
+\begin{monsterboxnobg}{Giant rat}
+	\textit{Small beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints 		= \dice{2d6},
+		speed		= {30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{7},
+		DEX	= \stat{15},
+		CON	= \stat{11},
+		INT	= \stat{2},
+		WIS	= \stat{10},
+		CHA	= \stat{4}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses 		= {darkvision 60 ft. passive Perception 10},
+		languages		= {-},
+		challenge		= 1/8
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The rat has advantage on Wisdom (Perception) checks that rely on smell.
+	\end{monsteraction}\\
+	\begin{monsteraction}[PackTactics]
+		The rat has advantage on an attack roll against a creature if at least one of the rat's allies is within 5 feet of the creature and the ally isn't incapacitated.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d4 + 2} piercing damage
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %		Giant weasel 			%
 %%%%%%%%%%%%%%%%%%	%
-Giant weasel
+\index{Giant weasel}
+\index[cr]{1@CR 1/8!Giant weasel}
+\begin{monsterboxnobg}{Giant weasel}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 13,
+		hitpoints 		= \dice{2d8},
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{11},
+		DEX	= \stat{16},
+		CON	= \stat{10},
+		INT	= \stat{4},
+		WIS	= \stat{12},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3, Stealth +5},
+		senses 		= {darkvision 60 ft. passive Perception 13},
+		languages		= {-},
+		challenge		= 1/8
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Hearing and Smell]
+		The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d4 + 3} piercing damage
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Mastiff 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Mastiff}
+\index[cr]{1@CR 1/8!Mastiff}
 \begin{monsterboxnobg}{Mastiff}
 	\textit{Medium beast, unaligned}\\
 	\hline
 	\basics[
 		armorclass	= 12,
-		hitpoints 		= 5 (1d8 + 1),
+		hitpoints 		= \dice{1d8 + 1},
 		speed		= {40 ft.}
 	]
 	\hline
@@ -489,19 +684,21 @@ Giant weasel
 	\end{monsteraction}
 	\monstersection{Actions}
 	\begin{monsteraction}[Bite]
-		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} 4 (1d6 + 1) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d6 + 1} piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
 	\end{monsteraction}
 \end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Mule 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Mule}
+\index[cr]{1@CR 1/8!Mule}
 \begin{monsterboxnobg}{Mule}
 	\textit{Medium beast, unaligned}\\
 	\hline
 	\basics[
 		armorclass	= 10,
-		hitpoints 		= 11 (2d8 + 2),
+		hitpoints 		= \dice{2d8 + 2},
 		speed		= {40 ft.}
 	]
 	\hline
@@ -523,33 +720,65 @@ Giant weasel
 	\hline \\[1mm]
 	\begin{monsteraction}[Beast of Burden]
 		The mule is considered to be a Large animal for the purpose of determining its carrying capacity.
-	\end{monsteraction}
-	
+	\end{monsteraction}\\
 	\begin{monsteraction}[Sure-Footed]
 		Whenever the mule would be knocked prone, it stays on its feet if it succeeds on a DC 10 Dexterity saving throw.
 	\end{monsteraction}
 	\monstersection{Actions}
 	\begin{monsteraction}[Hooves]
-		\textit{Melee Weapon Attack:} +2 to hit, reach 5ft., one target. \textit{Hit:} 4 (1d4 + 2) bludgeoning damage.
+		\textit{Melee Weapon Attack:} +2 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d4 + 2} bludgeoning damage.
 	\end{monsteraction}
 \end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Pony 			%
 %%%%%%%%%%%%%%%%%%	%
-Pony
-\newpage
+\index{Pony}
+\index[cr]{1@CR 1/8!Pony}
+\begin{monsterboxnobg}{Pony}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= \dice{2d8 + 2},
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{15},
+		DEX	= \stat{10},
+		CON	= \stat{13},
+		INT	= \stat{2},
+		WIS	= \stat{11},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {passive Perception 10},
+		languages		= {-},
+		challenge		= 1/8
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Hooves]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} \dice{2d4 + 2} bludgeoning damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+\clearpage
 \section{CR 1/4}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Boar 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Boar}
+\index[cr]{2@CR 1/4!Boar}
 \begin{monsterboxnobg}{Boar}
 	\textit{Medium beast, unaligned}\\
 	\hline
 	\basics[
 		armorclass	= 11,
-		hitpoints 		= 11 (2d8 + 2),
+		hitpoints 		= \dice{2d8 + 2},
 		speed		= {40 ft.}
 	]
 	\hline
@@ -570,57 +799,280 @@ Pony
 	]
 	\hline \\[1mm]
 	\begin{monsteraction}[Charge]
-		If the boar moves at least 20 feet straight toward a creature right before hitting it with a tusk attack, the target takes an extra 3 (1d6) slashing damage and must succeed on a DC 11 Strength saving throw or be knocked prone.
-	\end{monsteraction}
-	
+		If the boar moves at least 20 feet straight toward a creature right before hitting it with a tusk attack, the target takes an extra \dice{1d6} slashing damage and must succeed on a DC 11 Strength saving throw or be knocked prone.
+	\end{monsteraction}\\
 	\begin{monsteraction}[Relentless (Recharges after the Boar Finishes a Short or Long Rest)]
 		If the boar takes damage that reduces it to 0 hit points, unless the damage is 7 or more or from a critical hit, it drops to 1 hit point instead.
 	\end{monsteraction}
 	\monstersection{Actions}
 	\begin{monsteraction}[Tusk]
-		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} 4 (1d6 + 1) slashing damage.
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d6 + 1} slashing damage.
 	\end{monsteraction}
 \end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Draft horse		%
 %%%%%%%%%%%%%%%%%%	%
-Draft horse
+\index{Draft horse}
+\index[cr]{2@CR 1/4!Draft horse}
+\begin{monsterboxnobg}{Draft horse}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= \dice{3d10 + 3},
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{18},
+		DEX	= \stat{10},
+		CON	= \stat{12},
+		INT	= \stat{2},
+		WIS	= \stat{11},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {passive Perception 10},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Hooves]
+		\textit{Melee Weapon Attack:} +6 to hit, reach 5ft., one target. \textit{Hit:} \dice{2d4 + 4} bludgeoning damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Elk	 			%
 %%%%%%%%%%%%%%%%%%	%
-Elk
+\index{Elk}
+\index[cr]{2@CR 1/4!Elk}
+\begin{monsterboxnobg}{Elk}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= \dice{2d10 + 2},
+		speed		= {50 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{18},
+		DEX	= \stat{10},
+		CON	= \stat{12},
+		INT	= \stat{2},
+		WIS	= \stat{11},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {passive Perception 10},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Charge]
+		If the elk moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra \dice{2d6} damage. If the target is a creature it must succeed on a DC 13 Strength saving throw or be knocked prone.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Ram]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d6 + 3} bludgeoning damage.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Hooves]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5ft., one target. \textit{Hit:} \dice{2d4 + 3} bludgeoning damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %		Giant badger 			%
 %%%%%%%%%%%%%%%%%%	%
-Giant badger
+\index{Giant badger}
+\index[cr]{2@CR 1/4!Giant badger}
+\begin{monsterboxnobg}{Giant badger}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= \dice{2d8 + 4},
+		speed		= {30 ft., burrow 10 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{13},
+		DEX	= \stat{10},
+		CON	= \stat{15},
+		INT	= \stat{2},
+		WIS	= \stat{12},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {darkvision 30 ft., passive Perception 11},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The badger has advantage on llisdom (Perception) checks that rely on smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Multiattack]
+		The badger makes two attacks: one with its bite and one with its claws.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d6 + 1} piercing damage.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Claws]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} \dice{2d4 + 1} slashing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %		 Giant centipede 		%
 %%%%%%%%%%%%%%%%%%	%
-Giant centipede
+\index{Giant centipede}
+\index[cr]{2@CR 1/4!Giant centipede}
+\begin{monsterboxnobg}{Giant centipede}
+	\textit{Small beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 13 (natural armor),
+		hitpoints 		= \dice{1d6 + 1},
+		speed		= {30 ft., climb 30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{5},
+		DEX	= \stat{14},
+		CON	= \stat{12},
+		INT	= \stat{1},
+		WIS	= \stat{7},
+		CHA	= \stat{3}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {blindsight 30 ft., passive Perception 8},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one creature. \textit{Hit:} \dice{1d4 + 2} piercing damage, and the target must succeed on a DC 11 Constitution saving throw or take \dice{3d6} poison damage. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %		Giant lizard			%
 %%%%%%%%%%%%%%%%%%	%
-Giant lizard
+\index{Giant lizard}
+\index[cr]{2@CR 1/4!Giant lizard}
+\begin{monsterboxnobg}{Giant lizard}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= \dice{3d10 + 3},
+		speed		= {30 ft., climb 30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{15},
+		DEX	= \stat{12},
+		CON	= \stat{13},
+		INT	= \stat{2},
+		WIS	= \stat{10},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {darkvision 30 ft., passive Perception 10},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d8 + 2} piercing damage.
+	\end{monsteraction}
+	
+	A \textbf{giant lizard} can be ridden or used as a draft animal Lizardfolk also keep them as pets, and subterranean giant lizards are used as mounts and pack animals by drow, duergar, and other Underdark dwellers.
+	
+	\begin{paperbox}{Variant: Giant Lizard Traits}
+		Some giant lizards have one or both of the following traits.
+		
+		\impact{Hold Breath.} The lizard can hold its breath for 15 minutes. (A lizard that has this trait also has a swimming speedof 30 feet.)
+		
+		\impact{Spider Climb.} The lizard can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+	\end{paperbox}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %		Giant wolf spider		%
 %%%%%%%%%%%%%%%%%%	%
-Giant wolf spider
+\index{Giant wolf spider}
+\index[cr]{2@CR 1/4!Giant wolf spider}
+\begin{monsterboxnobg}{Giant wolf spider}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 13,
+		hitpoints 		= \dice{2d8 + 2},
+		speed		= {40 ft., climb 40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{12},
+		DEX	= \stat{16},
+		CON	= \stat{13},
+		INT	= \stat{3},
+		WIS	= \stat{12},
+		CHA	= \stat{4}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3, Stealth +7},
+		senses		= {blindsight 10 ft., darkvision 60 ft., passive Perception 13},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Spider Climb]
+		The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Web Sense]
+		While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Web Walker]
+		The spider ignores movement restrictions caused by webbing.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one creature. \textit{Hit:} \dice{1d6 + 1} piercing damage, and the target must make a DC 11 Constitution saving throw, taking \dice{2d6} poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.
+	\end{monsteraction}
+	
+	Smaller than a giant spider, a \textbf{giant wolf spider} hunts prey across open ground or hides in a burrow or crevice, or in a hidden cavity beneath debris.
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Panther 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Panther}
+\index[cr]{2@CR 1/4!Panther}
 \begin{monsterboxnobg}{Panther}
 	\textit{Medium beast, unaligned}\\
 	\hline
 	\basics[
 		armorclass	= 12,
-		hitpoints		= 13 (3d8),
+		hitpoints		= \dice{3d8},
 		speed		= {50 ft., climb 40 ft.}
 	]
 	\hline
@@ -649,28 +1101,61 @@ Giant wolf spider
 	\end{monsteraction}
 	\monstersection{Actions}
 	\begin{monsteraction}[Bite]
-		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} 5 (1d6 + 2) piercing damage.
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d6 + 2} piercing damage.
 	\end{monsteraction}
 	
 	\begin{monsteraction}[Claw]
-		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} 4 (1d4 + 2) slashing damage.
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d4 + 2} slashing damage.
 	\end{monsteraction}
 \end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Riding horse 		%
 %%%%%%%%%%%%%%%%%%	%
-Riding horse
+\index{Riding horse}
+\index[cr]{2@CR 1/4!Riding horse}
+\begin{monsterboxnobg}{Riding horse}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= \dice{2d10 + 2},
+		speed		= {60 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{16},
+		DEX	= \stat{10},
+		CON	= \stat{12},
+		INT	= \stat{2},
+		WIS	= \stat{11},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {passive Perception 10},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Hooves]
+		\textit{Melee Weapon Attack:} +2 to hit, reach 5ft., one target. \textit{Hit:} \dice{2d4 + 3} bludgeoning damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Wolf	 			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Wolf}
+\index[cr]{2@CR 1/4!Wolf}
 \begin{monsterboxnobg}{Wolf}
 	\textit{Medium beast, unaligned}\\
 	\hline
 	\basics[
 		armorclass	= 13,
-		hitpoints 		= 11 (2d8 + 2),
+		hitpoints 		= \dice{2d8 + 2},
 		speed		= {40 ft.}
 	]
 	\hline
@@ -699,7 +1184,7 @@ Riding horse
 	\end{monsteraction}
 	\monstersection{Actions}
 	\begin{monsteraction}[Bite]
-		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} 7 (2d4 + 2) piercing damage. Ifthe target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} \dice{2d4 + 2} piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
 	\end{monsteraction}
 \end{monsterboxnobg}
 \newpage
@@ -708,17 +1193,56 @@ Riding horse
 %%%%%%%%%%%%%%%%%%	%
 %			Ape 				%
 %%%%%%%%%%%%%%%%%%	%
-Ape
+\index{Ape}
+\index[cr]{3@CR 1/2!Ape}
+\begin{monsterboxnobg}{Ape}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints 		= \dice{3d8 + 6},
+		speed		= {30 ft., climb 30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{16},
+		DEX	= \stat{14},
+		CON	= \stat{14},
+		INT	= \stat{6},
+		WIS	= \stat{12},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {Athletics +5, Perception +3},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 1/2
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Multiattack]
+		The ape makes two fist attacks.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Multiattack]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5ft., one target. \textit{Hit:} \dice{1d6 + 3} bludgeoning damage.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Rock]
+		\textit{Ranged Weapon Attack:} +5 to hit, range 25/50 ft., one target. \textit{Hit:} \dice{1d6 + 3} bludgeoning damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %		Black Bear			%
 %%%%%%%%%%%%%%%%%%	%
+\index{Black Bear}
+\index[cr]{3@CR 1/2!Black Bear}
 \begin{monsterboxnobg}{Black Bear}
 	\textit{Medium beast, unaligned}\\
 	\hline
 	\basics[
 		armorclass	= 11 (natural armor),
-		hitpoints 		= 19 (3d8 + 6),
+		hitpoints 		= \dice{3d8 + 6},
 		speed		= {40 ft., climb 30 ft.}
 	]
 	\hline
@@ -747,18 +1271,67 @@ Ape
 	\end{monsteraction}
 	
 	\begin{monsteraction}[Bite]
-		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} 5 (1d6 + 2) piercing damage.
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d6 + 2} piercing damage.
 	\end{monsteraction}
 	
 	\begin{monsteraction}[Claws]
-		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} 7 (2d4 + 2) slashing damage.
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} \dice{2d4 + 2} slashing damage.
 	\end{monsteraction}	
 \end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Warhorse 			%
 %%%%%%%%%%%%%%%%%%	%
-Warhorse
+\index{Warhorse}
+\index[cr]{3@CR 1/2!Warhorse}
+\begin{monsterboxnobg}{Warhorse}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 11,
+		hitpoints 		= \dice{3d10 + 3},
+		speed		= {60 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{18},
+		DEX	= \stat{12},
+		CON	= \stat{13},
+		INT	= \stat{2},
+		WIS	= \stat{12},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {passive Perception 11},
+		languages		= {-},
+		challenge		= 1/1
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Trampling Charge]
+		If the horse moves at least 20 feet straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC l4 Strength saving throw or be knocked prone. If the target is prone, the horse can make another attack with its hooves against it as a bonus action.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Hooves]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} \dice{2d6 + 4} bludgeoning damage.
+	\end{monsteraction}
+	\begin{paperbox}{Variant: Warhorse Armor}
+	An armored warhorse has an AC based on the type of barding worn (see the \textit{Player's Handbook} for more information on barding). The horse's AC includes its Dexterity modifier, where applicable. Barding doesn't alter the horse's challenge rating.
+	\begin{dndtable}[XXXX]
+	%\textbf{AC}	& \textbf{Barding}	&	\textbf{AC}	&	\textbf{Barding}\\
+	  % 	12  			& Leather			&	16			&	Chain mail\\
+  		%13  			& Studded leather	&	17			&	Splint
+%	   	14  			& Ring mail		&	18			& 	\\
+%		15			& Scale mail		&				&
+   	\textbf{AC}  & \textbf{Barding} & AC & Barding\\
+   	Some value  & Some value \\
+   	Some value  & Some value \\
+   	Some value  & Some value 
+	\end{dndtable}
+	\end{paperbox}
+\end{monsterboxnobg}
+
 
 %%%%%%%%%%%%%%%%%%	%
 %			Worg 			%
