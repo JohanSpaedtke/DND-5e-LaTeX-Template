@@ -15,7 +15,7 @@
 %makeindex egelia.cdx -o egelia.cnd 
 \newindex{cr}{cdx}{cnd}{By CR}
 
-%\widowpenalties 1 10000
+\widowpenalties 1 10000
 \raggedbottom
 
 \usepackage{color}
@@ -43,8 +43,6 @@
 \title{Egelia}
 \author{Druid of the Moon}
 \maketitle
-
-\dndtoc[3]
 
 \chapter{Creatures}
 \section{CR 0}
@@ -1329,23 +1327,61 @@ of 30 feet.)
 	\end{paperbox}
 \end{monsterboxnobg}
 
-
+\newpage
 %%%%%%%%%%%%%%%%%%	%
 %			Worg 			%
 %%%%%%%%%%%%%%%%%%	%
-Worg
-\newpage
+\index{Worg}
+\index[cr]{3@CR 1/2!Worg}
+\begin{monsterboxnobg}{Worg}
+	\textit{Large monstrosity, neutral evil}\\
+	\hline
+	\basics[
+		armorclass	= 12 (natural armor),
+		hitpoints 		= \dice{4d10 + 4},
+		speed		= {50 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{16}, 
+		DEX	= \stat{13},
+		CON	= \stat{13},
+		INT	= \stat{7},
+		WIS	= \stat{11},
+		CHA	= \stat{8}
+	]
+	\hline
+	\details[
+	skills			= {Perception +4},
+	senses		= {darkvision 60 ft., passive Perception 14},
+	languages		= {Goblin, Worg},
+	challenge		= 1/2
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Hearing and Smell]
+		The worg has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{2d6 + 3} piercing damage. lf the target is a creature, it must succeed on a DC l3 Strength saving throw or be knocked prone.
+	\end{monsteraction}
+	
+	A worg is an evil predator that delights in hunting and devouring creatures weaker than itself. Cunning and malevolent, worgs roam across the remote wilderness or are raised by goblins and hobgoblins. Those creatures use worgs as mounts, but a worg will turn on its rider if it feels mistreated or malnourished. Worgs speak in their own language and Goblin, and a few learn to speak Common as well.
+\end{monsterboxnobg}
+\clearpage
 \section{CR 1}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Brown Bear 		%
 %%%%%%%%%%%%%%%%%%	%
+\index{Brown Bear}
+\index[cr]{4@CR 1!Brown Bear}
 \begin{monsterboxnobg}{Brown Bear}
 	\textit{Large beast, unaligned}\\
 	\hline
 	\basics[
 		armorclass	= 11 (natural armor),
-		hitpoints		= 34 (4d10 + 12),
+		hitpoints		= \dice{4d10 + 12},
 		speed		= {40 ft., climb 30 ft.}
 	]
 	\hline
@@ -1374,95 +1410,332 @@ Worg
 	\end{monsteraction}
 	
 	\begin{monsteraction}[Bite]
-		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} 8 (1d8 + 4) piercing damage.
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d8 + 4} piercing damage.
 	\end{monsteraction}
 	
 	\begin{monsteraction}[Claws]
-		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} 11 (2d6 + 4) slashing damage.
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{2d6 + 4} slashing damage.
 	\end{monsteraction}	
 \end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Dire wolf 			%
 %%%%%%%%%%%%%%%%%%	%
-Dire wolf
+\index{Dire wolf}
+\index[cr]{4@CR 1!Dire wolf}
+\begin{monsterboxnobg}{Dire wolf}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 14 (natural armor),
+		hitpoints		= \dice{5d10 + 10},
+		speed		= {50 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{17},
+		DEX	= \stat{15},
+		CON	= \stat{15},
+		INT	= \stat{3},
+		WIS	= \stat{12},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3, Stealth +4},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 1
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Hearing and Smell]
+		The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Pack Tactics]
+		The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally isn't incapacitated.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{2d6 + 3} piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Giant hyena		%
 %%%%%%%%%%%%%%%%%%	%
-Giant hyena
+\index{Dire wolf}
+\index[cr]{4@CR 1!Giant hyena}
+\begin{monsterboxnobg}{Giant hyena}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints		= \dice{6d10 + 12},
+		speed		= {50 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{16},
+		DEX	= \stat{14},
+		CON	= \stat{14},
+		INT	= \stat{2},
+		WIS	= \stat{12},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 1
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Rampoge]
+		When the hyena reduces a creature to 0 hit points with a melee attack on its turn, the hyena can take a bonus action to move up to half its speed and make a bite attack
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{2d6 + 3} piercing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Giant spider		%
 %%%%%%%%%%%%%%%%%%	%
-Giant spider
+\index{Giant spider}
+\index[cr]{4@CR 1!Giant spider}
+\begin{monsterboxnobg}{Giant spider}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 14 (natural armor),
+		hitpoints		= \dice{4d10 + 4},
+		speed		= {30 ft., climb 30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{14},
+		DEX	= \stat{16},
+		CON	= \stat{12},
+		INT	= \stat{2},
+		WIS	= \stat{11},
+		CHA	= \stat{4}
+	]
+	\hline
+	\details[
+		skills			= {Stealth +7},
+		senses		= {blindsight 10 ft., darkvision 60 ft., passive Perception 10},
+		languages		= {-},
+		challenge		= 1
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Spider Climb]
+		The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Web Sense]
+		While in contact with a web, the spider knows the exact location of any other creature in contact with the same web.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Web Walker]
+		The spider ignores movement restrictions caused by webbing.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one creature. \textit{Hit:} \dice{1d8 + 3} piercing damage, and the target must make a DC 11 Constitution saving throw, taking \dice{2d8} poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Web (Recharge 5-6)]
+		\textit{Ranged Weapon Attack:} +5 to hit, range 30/60 ft., one creature. \textit{Hit:} The target is restrained by webbing. As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage).	
+	\end{monsteraction}
+	
+	To snare its prey, a \textbf{giant spider} spins elaborate webs or shoots sticky strands of webbing from its abdomen. Giant spiders are most commonly found underground, making their lairs on ceilings or in dark. web-filled crevices. Such lairs are often festooned with web cocoons holding past victims.
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Lion 			%
 %%%%%%%%%%%%%%%%%%	%
-Lion
+\index{Lion}
+\index[cr]{4@CR 1!Lion}
+\begin{monsterboxnobg}{Lion}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints		= \dice{4d10 + 4},
+		speed		= {50 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{17},
+		DEX	= \stat{15},
+		CON	= \stat{13},
+		INT	= \stat{3},
+		WIS	= \stat{12},
+		CHA	= \stat{8}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3, Stealth +6},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 1
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The lion has advantage on Wisdom (Perception) checks that rely on smell.
+	\end{monsteraction}\\
+	\begin{monsteraction}[PackTactics.]
+		The lion has advantage on an attack roll against a creature if at least one of the lion's allies is within 5 feet of the creature and the ally isn't incapacitated.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Pounce]
+		If the lion moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the lion can make one bite attack against it as a bonus action.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Running Leap]
+		With a 10-foot running start, the lion can long jump up to 25 feet.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d8 + 3} piercing damage.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Claw]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d6 + 3} slashing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
 
 %%%%%%%%%%%%%%%%%%	%
 %			Tiger 			%
 %%%%%%%%%%%%%%%%%%	%
-Tiger
+\index{Tiger}
+\index[cr]{4@CR 1!Tiger}
+\begin{monsterboxnobg}{Tiger}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints		= \dice{5d10 + 10},
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{17},
+		DEX	= \stat{15},
+		CON	= \stat{14},
+		INT	= \stat{3},
+		WIS	= \stat{12},
+		CHA	= \stat{8}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3, Stealth +6},
+		senses		= {darkvision 60 ft., passive Perception 13},
+		languages		= {-},
+		challenge		= 1
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The tiger has advantage on llisdom (Perception) checks that rely on smell.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Pounce]
+		If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d10 + 3} piercing damage.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Claw]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d8 + 3} slashing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
 \chapter{Spells}
 \section{Cantrips}
-\spell{Guidance}
-{Divination cantrip}
-{\color{action} 1 action}
-{Touch}
-{V, S}
-{Concentration, up to 1 minute}
-%
-You touch one willing creature. Once before the spell ends, the target can roll a d4 and add the number rolled to one ability check of its choice. It can roll the die before or after making the ability check. The spell then ends. 
-
-\spell{Thaumaturgy}
+\spell{Mending}
 {Transmutation cantrip}
-{\color{action} 1 action}
-{30 feet}
-{V}
-{Up to 1 minute}
+{1 minute}
+{Touch}
+{V, S, M (two lodestones)}
+{Instantaneous}
 %
-You manifest a minor wonder, a sign of supernatural power, within range. You create one of the following magical effects within range:
-\begin{itemize}
-	\item Your voice booms up to three times as loud as normal for 1 minute.
-	\item You cause flames to flicker, brighten, dim, or change color for 1 minute.
-	\item You cause harmless tremors in the ground for 1 minute.
-	\item You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.
-	\item You instantaneously cause an unlocked door or win  dow to fly open or slam shut.
-	\item You alter the appearance of your eyes for 1 minute.
-\end{itemize}
-If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
+This spell repairs a single break or tear in an object you touch, such as a broken chain link, two halves of a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it. leaving no trace of the former damage.
 
-\newpage
+This spell can physically repair a magic item or construct, but the spell can?t restore magic to such an object.
+
+\spell{Shillelagh}
+{Transmutation cantrip}
+{\color{bonusaction} 1 bonus action}
+{Touch}
+{V, S, M  (mistletoe, a shamrock leaf, and a club or quarterstaff)}
+{1 minute}
+%
+The wood of a club or quarterstaff you are holding is imbued with nature?s power. For the duration, you can use your spellcasting ability instead of Strength for the attack and damage rolls of melee attacks using that weapon, and the weapon's damage die becomes a d8. The weapon also becomes magical, if it isn?t already. The spell ends if you cast it again or if you let go of the weapon.
+
+\clearpage
 \section{Level 1}
-\spell{Bane}
+%Animal Friendship 
+\spell{Charm Person}
 {1st-level enchantment}
 {\color{action} 1 action}
 {30 feet}
-{V, S, M (a drop of blood)}
-{Concentration, up to 1 minute}
+{V, S}
+{1 hour}
 %
-Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.
+You attempt to charm a humanoid you can see within range. It must make a W isdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.
 
-\textbf{\textit{At Higher Levels.}} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
-
-\newpage
-\section{Level 2}
-\spell{Aid}
-{2nd-level abjuration}
-{\color{action}1 action}
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.The creatures must be within 30 feet of each other when you target them.
+\spell{Create or Destroy Water}
+{1st-level transmutation}
+{\color{action} 1 action}
 {30 feet}
-{V, S, M (a tiny strip of white cloth)}
-{8 hours}
+{V, S, M (a drop of water if creating water or a few grains of sand if destroying it)}
+{Instantaneous}
 %
-Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit point maximum and current hit points increase by 5 for the duration.
+You either create or destroy water.
 
-\textbf{\textit{At Higher Levels.}} When you cast this spell using
-a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd.
+\impact{Create Water.} You create up to 10 gallons of clean
+water within range in an open container. Alternatively, the water falls as rain in a 30-foot cube within range, extinguishing exposed flames in the area.
 
-\newpage
+\impact{Destroy Water.} You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.
+
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.
+\spell{Detect Magic}
+{1st-level divination {\color{ritual}(ritual)}}
+{\color{action} 1 action}
+{Self}
+{V, S}
+{{\color{concentration}Concentration}, up to 10 minutes}
+%
+For the duration, you sense the presence of magic
+within 30 feet of you. If you sense magic in this way, you can use your action to see a faint aura around any visible creature or object in the area that bears magic, and you learn its school of magic, if any.
+
+The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.
+\spell{Detect Poison and Disease}
+{1st-level divination {\color{ritual}(ritual)}}
+{\color{action} 1 action}
+{Self}
+{V, S, M (a yew leaf)}
+{{\color{concentration}Concentration}, up to 10 minutes}
+%
+For the duration, you can sense the presence and location of poisons, poisonous creatures, and diseases within 30 feet of you. You also identify the kind of poison, poisonous creature, or disease in each case.
+
+The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.
+%Faerie Fire%Fog Cloud%Goodberry\spell{Healing Word}
+{1st-level evocation}
+{\color{bonusaction} 1 bonus action}
+{60 feet}
+{V}
+{Instantaneous}
+%
+A creature of your choice that you can see within range regains hit points equal to \dice{1d4 + \castingModifier}. This spell has no effect on undead or constructs.
+
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.
+%Jump%Longstrider\spell{Purify Food and Drink}
+{1st-level transmutation {\color{ritual}(ritual)}}
+{\color{action} 1 action}
+{10 feet}
+{V, S}
+{Instantaneous}
+%
+All nonmagical food and drink within a 5-foot-radius sphere centered on a point of your choice within range is purified and rendered free of poison and disease.
+
+%Speak with Animals%Thunderwave
 \printindex
 \printindex[cr]
 \end{document}
