@@ -6,6 +6,8 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
+\usepackage{ragged2e}
+
 \usepackage{index}
 \makeindex
 %To rebuild this index run the following in the terminal before typesetting
@@ -15,7 +17,6 @@
 
 \widowpenalties 1 10000
 \raggedbottom
-\raggedright
 
 \usepackage{color}
 \definecolor{cost}{RGB}{218,165,32}
@@ -27,17 +28,23 @@
 \definecolor{concentration}{RGB}{0,127,255}
 \definecolor{ritual}{RGB}{50,124,15}
 
+%Spellcasting ability modifier
+\newcommand{\castingModifier}{3}
+
 \newcommand\impact[1]{
 	\textbf{\textit{#1}}
 }
 
-\parindent=1em
+\setlength{\RaggedRightParindent}{\parindent}
+\RaggedRight
 
 \begin{document}
 
 \title{Egelia}
 \author{Druid of the Moon}
 \maketitle
+
+\dndtoc[3]
 
 \chapter{Creatures}
 \section{CR 0}
