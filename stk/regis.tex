@@ -1,11 +1,14 @@
-% Changing book to article will make the footers match on each page,
-% rather than alternate every other.
-%
-% Note that the article class does not have chapters.
 \documentclass[10pt,twoside,twocolumn,openany]{book}
-\usepackage[bg-print]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage{etex}
+\reserveinserts{28}
+
+\usepackage[bg-print]{dnd}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
+
+\usepackage{index}
+\makeindex
+
 \widowpenalties 1 10000
 \raggedbottom
 \raggedright
@@ -24,9 +27,8 @@
 	\textbf{\textit{#1}}
 }
 
+\parindent=1em
 
-\parindent=1em%
-% Start document
 \begin{document}
 
 \title{Regis}
@@ -144,7 +146,8 @@ A creature is unaffected by this spell if it can’t see, if it relies on senses
 {2nd-level abjuration}
 {\color{action} 1 action}
 {Self}
-{V, S, M (ashes from a burned leaf ofmistletoe and a sprig of spruce)}
+{V, S, M (ashes from a burned leaf of
+mistletoe and a sprig of spruce)}
 {{\color{concentration}Concentration}, up to 1 hour}
 %
 A veil of shadows and silence radiates from you, masking you and your companions from detection. For the duration, each creature you choose within 30 feet of you (including you) has a +10 bonus to Dexterity (Stealth)checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage.
@@ -614,7 +617,8 @@ This spell can’t locate an object if any thickness of lead, even a thin sheet,
 %
 Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
 
-\impact{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, the healing increases by1d8 for each slot level above 2nd.
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, the healing increases by
+1d8 for each slot level above 2nd.
 
 \spell{Protection from Poison}
 {2nd-level abjuration}
@@ -673,4 +677,6 @@ You create a magical zone that guards against deception in a 15-foot-radius sphe
 
 An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such a creature can be evasive in its answers as long as it remains within the boundaries of the truth.
 
+\newpage
+\printindex
 \end{document}
