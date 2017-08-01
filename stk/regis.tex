@@ -6,12 +6,14 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
+\usepackage{ragged2e}
+
 \usepackage{index}
 \makeindex
 
 \widowpenalties 1 10000
 \raggedbottom
-\raggedright
+
 
 \usepackage{color}
 \definecolor{cost}{RGB}{218,165,32}
@@ -30,7 +32,8 @@
 	\textbf{\textit{#1}}
 }
 
-\parindent=1em
+\setlength{\RaggedRightParindent}{\parindent}
+\RaggedRight
 
 \begin{document}
 
