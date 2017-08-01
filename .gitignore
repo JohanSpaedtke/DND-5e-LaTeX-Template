@@ -7,5 +7,7 @@
 *.ind
 *.log
 *.ndx
+*.out
 *.pdf
 *.synctex.gz
+*.toc
