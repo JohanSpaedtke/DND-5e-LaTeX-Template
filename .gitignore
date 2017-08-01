@@ -1,6 +1,11 @@
 *.aux
-*.fls
-*.log
-*.blg
 *.bbl
+*.blg
+*.fls
+*.idx
+*.ilg
+*.ind
+*.log
+*.ndx
+*.pdf
 *.synctex.gz
