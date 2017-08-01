@@ -1,6 +1,8 @@
 *.aux
 *.bbl
 *.blg
+*.cdx
+*.cnd
 *.fls
 *.idx
 *.ilg
