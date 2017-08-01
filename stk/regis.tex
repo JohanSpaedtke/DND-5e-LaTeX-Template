@@ -23,6 +23,9 @@
 \definecolor{concentration}{RGB}{0,127,255}
 \definecolor{ritual}{RGB}{50,124,15}
 
+%Spellcasting ability modifier
+\newcommand{\castingModifier}{3}
+
 \newcommand\impact[1]{
 	\textbf{\textit{#1}}
 }
@@ -71,7 +74,7 @@ As an action, you become invisible until the end of your next turn. You become v
 {--}
 {--}
 %
-At 8th level, you gain the ability to infuse your weapon strikes with poison'a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra 1d8 poison damage to the target. When you reach 14th level, the extra damage increases to 2d8.
+At 8th level, you gain the ability to infuse your weapon strikes with poison'a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra \dice{1d8} poison damage to the target. When you reach 14th level, the extra damage increases to \dice{2d8}.
 
 \spell{Invoke Duplicity}
 {Channel Divinity}
@@ -99,7 +102,6 @@ A turned creature must spend its turns trying to move as far away from you as it
 move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.
 
 \chapter{Trickery Domain Spells}
-\section{Level 1}
 \spell{Charm Person}
 {1st-level enchantment}
 {\color{action} 1 action}
@@ -118,13 +120,12 @@ You attempt to charm a humanoid you can see within range. It must make a W isdom
 {V, S}
 {1 hour}
 %
-You make yourself'including your clothing, armor, weapons, and other belongings on your person'look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.
+You make yourself including your clothing, armor, weapons, and other belongings on your person look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.
 
-The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spellto add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.
+The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.
 
 To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.
 
-\section{Level 3}
 \spell{Mirror Image}
 {2nd-level illusion}
 {\color{action} 1 action}
@@ -132,15 +133,15 @@ To discern that you are disguised, a creature can use its action to inspect your
 {V, S}
 {1 minute}
 %
-Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it’s impossible to track which image is real. You can use your action to dismiss the illusory duplicates.
+Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates.
 
-Each time a creature targets you with an attack during the spell’s duration, roll a d20 to determine whether the attack instead targets one of your duplicates.
+Each time a creature targets you with an attack during the spell's duration, roll a d20 to determine whether the attack instead targets one of your duplicates.
 
-If you have three duplicates, you must roll a 6 or higher to change the attack’s target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.
+If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.
 
-A duplicate’s AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.
+A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.
 
-A creature is unaffected by this spell if it can’t see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight.
+A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight.
 
 \spell{Pass without Trace}
 {2nd-level abjuration}
@@ -152,7 +153,6 @@ mistletoe and a sprig of spruce)}
 %
 A veil of shadows and silence radiates from you, masking you and your companions from detection. For the duration, each creature you choose within 30 feet of you (including you) has a +10 bonus to Dexterity (Stealth)checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage.
 
-\section{Level 5}
 \spell{Blink}
 {3rd-level transmutation}
 {\color{action} 1 action}
@@ -162,7 +162,7 @@ A veil of shadows and silence radiates from you, masking you and your companions
 %
 Roll a d20 at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action.
 
-While on the Ethereal Plane, you can see and hear the plane you originated from, which is cast in shades of gray, and you can’t see anything there more than 60 feet away. You can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren’t there can’t perceive you or interact with you, unless they have the ability to do so.
+While on the Ethereal Plane, you can see and hear the plane you originated from, which is cast in shades of gray, and you can't see anything there more than 60 feet away. You can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren't there can't perceive you or interact with you, unless they have the ability to do so.
 
 \spell{Dispel Magic}
 {3rd-level illusion}
@@ -171,11 +171,10 @@ While on the Ethereal Plane, you can see and hear the plane you originated from,
 {V, S}
 {Instantaneous}
 %
-Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell’s level. On a successful check, the spell ends.
+Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a successful check, the spell ends.
 
-\impact{At Higher Levels.} When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell’s level is equal to or less than the level of the spell slot you used.
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.
 
-\section{Level 7}
 \spell{Dimension Door}
 {4th-level conjuration}
 {\color{action} 1 action}
@@ -183,11 +182,11 @@ Choose one creature, object, or magical effect within range. Any spell of 3rd le
 {V}
 {Instantaneous}
 %
-You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as “200 feet straight downward” or “upward to the northwest at a 45-degree angle, 300 feet.”
+You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as 200 feet straight downward or upward to the northwest at a 45-degree angle, 300 feet.
 
-You can bring along objects as long as their weight doesn’t exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.
+You can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.
 
-If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take 4d6 force damage, and the spell fails to teleport you.
+If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take \dice{4d6} force damage, and the spell fails to teleport you.
 
 \spell{Polymorph}
 {4th-level transmutation}
@@ -198,15 +197,14 @@ If you would arrive in a place already occupied by an object or a creature, you 
 %
 This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw.
 
-The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target’s (or the target’s level, if it doesn't have a challenge rating). The target’s game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.
+The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.
 
-The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn’t reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.
+The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.
 
-The creature is limited in the actions it can perform by the nature of its new form, and it can’t speak, cast spells, or take any other action that requires hands or speech.
+The creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.
 
-The target’s gear melds into the new form. The creature can’t activate, use, wield, or otherwise benefit from any of its equipment.
+The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.
 
-\section{Level 9}
 \spell{Dominate Person}
 {5th-level enchantment}
 {\color{action} 1 action}
@@ -216,14 +214,14 @@ The target’s gear melds into the new form. The creature can’t activate, use,
 %
 You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.
 
-While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as “Attack that creature,” “Run over there,” or “Fetch that object.” If the creature completes the order and doesn’t receive further direction from you, it defends and preserves itself to the best of its ability.
+While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as Attack that creature, Run over there, or Fetch that object. If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.
 
-You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn’t do anything that you don’t allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.
+You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.
 
-Each time the target takes damage, it makes a new W isdom saving throw against the spell. If the saving throw succeeds, the spell ends.
+Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.
 
 \impact{At Higher Levels.} When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours.
-
+\newpage
 \spell{Modify Memory}
 {5th-level enchantment}
 {\color{action} 1 action}
@@ -231,17 +229,17 @@ Each time the target takes damage, it makes a new W isdom saving throw against t
 {V, S}
 {{\color{concentration}Concentration}, up to 1 minute}
 %
-You attempt to reshape another creature’s memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target’s memories are modified.
+You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.
 
-While this charm lasts, you can affect the target’s memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.
+While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.
 
-You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature’s memory isn’t altered. Otherwise, the modified memories take hold when the spell ends.
+You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.
 
-A modified memory doesn’t necessarily affect how a creature behaves, particularly if the m em ory contradicts the creature’s natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.
+A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.
 
-A remove curse or greater restoration spell cast on the target restores the creature’s true memory.
+A remove curse or greater restoration spell cast on the target restores the creature's true memory.
 
-\impact{At Higher Levels.} If you cast this spell using a spell slot of 6th level or higher, you can alter the target’s memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature’s past (9th level).
+\impact{At Higher Levels.} If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level).
 
 \chapter{Cleric Spells}
 \section{Cantrips}
@@ -359,10 +357,10 @@ water within range in an open container. Alternatively, the water falls as rain 
 {V, S}
 {Instantaneous}
 %
-A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+A creature you touch regains a number of hit points equal to \dice{1d8 + \castingModifier}. This spell has no effect on undead or constructs.
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, the healing increases by
-1d8 for each slot level above 1st.
+\dice{1d8} for each slot level above 1st.
 
 \spell{Detect Evil and Good}
 {1st-level divination}
@@ -413,7 +411,7 @@ You touch one willing creature. Once before the spell ends, the target can roll 
 {V}
 {Instantaneous}
 %
-A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+A creature of your choice that you can see within range regains hit points equal to \dice{1d4 + \castingModifier}. This spell has no effect on undead or constructs.
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, the healing increases by 1d4 for each slot level above 1st.
 
@@ -424,10 +422,10 @@ A creature of your choice that you can see within range regains hit points equal
 {V, S}
 {Instantaneous}
 %
-Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.
+Make a melee spell attack against a creature you can reach. On a hit, the target takes \dice{3d10} necrotic damage.
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, the damage increases by
-1d10 for each slot level above 1st.
+\dice{1d10} for each slot level above 1st.
 
 \spell{Protection from Evil and Good}
 {1st-level abjuration}
@@ -615,10 +613,10 @@ This spell can’t locate an object if any thickness of lead, even a thin sheet,
 {V}
 {Instantaneous}
 %
-Up to six creatures of your choice that you can see within range each regain hit points equal to 2d8 + your spellcasting ability modifier. This spell has no effect on undead or constructs.
+Up to six creatures of your choice that you can see within range each regain hit points equal to \dice{2d8 + \castingModifier}. This spell has no effect on undead or constructs.
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, the healing increases by
-1d8 for each slot level above 2nd.
+\dice{1d8} for each slot level above 2nd.
 
 \spell{Protection from Poison}
 {2nd-level abjuration}
@@ -647,13 +645,13 @@ For the duration, no sound can be created within or pass through a 20-foot-radiu
 {V, S}
 {1 minute}
 %
-You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to 1d8 + your spellcasting ability modifier.
+You create a floating, spectral weapon within range that lasts for the duration or until you cast this spell again. When you cast the spell, you can make a melee spell attack against a creature within 5 feet of the weapon. On a hit, the target takes force damage equal to \dice{1d8 + \castingModifier}.
 
 As a bonus action on your turn, you can move the weapon up to 20 feet and repeat the attack against a creature within 5 feet of it.
 
-The weapon can take whatever form you choose. Clerics of deities who are associated with a particular weapon (as St. Cuthbert is known for his mace and Thor for his hammer) make this spell’s effect resemble that weapon.
+The weapon can take whatever form you choose. Clerics of deities who are associated with a particular weapon (as St. Cuthbert is known for his mace and Thor for his hammer) make this spell's effect resemble that weapon.
 
-\impact{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, the damage increases by 1d8 for every two slot levels above the 2nd.
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, the damage increases by \dice{1d8} for every two slot levels above the 2nd.
 
 \spell{Warding Bond}
 {2nd-level abjuration}
