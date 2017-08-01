@@ -1,94 +1,726 @@
-% Changing book to article will make the footers match on each page,
-% rather than alternate every other.
-%
-% Note that the article class does not have chapters.
 \documentclass[10pt,twoside,twocolumn,openany]{book}
-\usepackage[bg-print]{dnd} % Options: bg-a4, bg-letter, bg-full, bg-print, bg-none.
+\usepackage{etex}
+\reserveinserts{28}
+
+\usepackage[bg-print]{dnd}
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
+
+\usepackage{index}
+\makeindex
+%To rebuild this index run the following in the terminal before typesetting
+%makeindex egelia
+%makeindex egelia.cdx -o egelia.cnd 
+\newindex{cr}{cdx}{cnd}{By CR}
 
 \widowpenalties 1 10000
 \raggedbottom
 \raggedright
 
 \usepackage{color}
-\definecolor{reaction}{RGB}{255,127,0}
-\definecolor{bonusaction}{RGB}{255,0,127}
-\definecolor{action}{RGB}{0,255,127}
-\definecolor{long}{RGB}{0,127,255}
-\definecolor{ritual}{RGB}{127,0,255}
-\definecolor{cost}{RGB}{127,255,0}
+\definecolor{cost}{RGB}{218,165,32}
 
-% Start document
+\definecolor{reaction}{RGB}{143,129,18}
+\definecolor{bonusaction}{RGB}{143,69,18}
+\definecolor{action}{RGB}{22,39,97}
+
+\definecolor{concentration}{RGB}{0,127,255}
+\definecolor{ritual}{RGB}{50,124,15}
+
+\newcommand\impact[1]{
+	\textbf{\textit{#1}}
+}
+
+\parindent=1em
+
 \begin{document}
-%\fontfamily{ppl}\selectfont % Set text font
 
-\chapter{Critters}
+\title{Egelia}
+\author{Druid of the Moon}
+\maketitle
+
+\chapter{Creatures}
 \section{CR 0}
-\begin{monsterboxnobg}{Bat}
-	\textit{Tiny beast, unaligned}\\
+%%%%%%%%%%%%%%%%%%	%
+%			Baboon			%
+%%%%%%%%%%%%%%%%%%	%
+\index{Baboon}
+\index[cr]{CR 0!Baboon}
+\begin{monsterboxnobg}{Baboon}
+	\textit{Small beast, unaligned}\\
 	\hline
-	\basics[%
-	armorclass = 12,
-	hitpoints  = 1 (1d4 - 1),
-	speed      = {5 ft., fly 30 ft.}
+	\basics[
+		armorclass	= 12,
+		hitpoints 		= 3 (1d6),
+		speed		= {30 ft., climb 30 ft.}
 	]
 	\hline
 	\stats[
-    STR = \stat{2}, % This stat command will autocomplete the modifier for you
-    DEX = \stat{15},
-    CON = \stat{8},
-    INT = \stat{2},
-    WIS = \stat{12},
-    CHA = \stat{4}
+		STR	= \stat{8},
+		DEX	= \stat{14},
+		CON	= \stat{11},
+		INT	= \stat{4},
+		WIS	= \stat{12},
+		CHA	= \stat{6}
 	]
 	\hline
-	\details[%
-	% If you want to use commas in these sections, enclose the
-	% description in braces.
-	% I'm so sorry.
-	senses = {blindsight 60 ft., passive Perception 11},
+	\details[
+		skills			= {},
+		senses		= {passive Perception 11},
+		languages		= {-},
+		challenge		= 0
 	]
 	\hline \\[1mm]
-	\begin{monsteraction}[Echolocation]
-		While it can't hear, the bat has no blindsight.
-	\end{monsteraction}
-	\\
-	\begin{monsteraction}[Keen Hearing]
-		The bat has advantage on Wisdom (Perception) checks that rely on hearing.
+	\begin{monsteraction}[Pack Tactics]
+		The baboon has advantage on an attack roll against a creature if at least one of the baboon's allies is within 5 feet of the creature and the ally isn't incapacitated.
 	\end{monsteraction}
 	\monstersection{Actions}
 	\begin{monsteraction}[Bite]
-		\textit{Melee Weapon Attack:} +0 to hit, reach 5ft., one creature. \textit{Hit:} 1 piercing damage.
+		\textit{Melee Weapon Attack:} +1 to hit, reach 5ft., one target. \textit{Hit:} 1 (1d4 - 1) piercing damage.
 	\end{monsteraction}
 \end{monsterboxnobg}
-\newpage
-\section{CR 1}
-\begin{monsterboxnobg}{Black Bear}
-	\textit{Medium beast, unaligned}\\
+
+%%%%%%%%%%%%%%%%%%	%
+%			Badger			%
+%%%%%%%%%%%%%%%%%%	%
+\index{Badger}
+\index[cr]{CR 0!Badger}
+\begin{monsterboxnobg}{Badger}
+	\textit{Tiny beast, unaligned}\\
 	\hline
-	\basics[%
-	armorclass = 11 (natural armor),
-	hitpoints  = 19 (3d8 + 6),
-	speed      = {40 ft., climb 30 ft.}
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= 3 (1d4 + 1),
+		speed		= {20 ft., burrow 5 ft.}
 	]
 	\hline
 	\stats[
-    STR = \stat{15}, % This stat command will autocomplete the modifier for you
-    DEX = \stat{10},
-    CON = \stat{14},
-    INT = \stat{2},
-    WIS = \stat{12},
-    CHA = \stat{7}
+		STR= \stat{4},
+		DEX	= \stat{11},
+		CON	= \stat{12},
+		INT	= \stat{2},
+		WIS	= \stat{12},
+		CHA	= \stat{5}
 	]
 	\hline
-	\details[%
-	% If you want to use commas in these sections, enclose the
-	% description in braces.
-	% I'm so sorry.
-	skills = Perception +3,
-	senses = passive Perception 11,
-	challenge = ?
+	\details[
+		skills			= {},
+		senses		= {darkvision 30 ft., passive Perception 11},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The badger has advantage on Wisdom (Perception) checks that rely on smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +2 to hit, reach 5ft., one target. \textit{Hit:} 1 piercing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Cat				%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Cat}
+	\textit{Tiny beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints 		= 2 (1d4),
+		speed		= {40 ft., climb 30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{3},
+		DEX	= \stat{15},
+		CON	= \stat{10},
+		INT	= \stat{3},
+		WIS	= \stat{12},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3, Stealth +4},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The cat has advantage on Wisdom (Perception) checks that rely on smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Claws]
+		\textit{Melee Weapon Attack:} +0 to hit, reach 5ft., one target. \textit{Hit:} 1 slashing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Deer				%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Deer}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 13,
+		hitpoints 		= 4 (1d8),
+		speed		= {50 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{11},
+		DEX	= \stat{16},
+		CON	= \stat{11},
+		INT	= \stat{2},
+		WIS	= \stat{14},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses 		= {passive Perception 12},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +2 to hit, reach 5ft., one target. \textit{Hit:} 2 (1d4) piercing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%		Giant Fire Beetle		%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Giant Fire Beetle}
+	\textit{Small beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 13 (natural armor),
+		hitpoints 		= 4 (1d6 + 1),
+		speed		= {30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{8},
+		DEX	= \stat{10},
+		CON	= \stat{12},
+		INT	= \stat{1},
+		WIS	= \stat{7},
+		CHA	= \stat{3}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {blindsight 30 ft., passive Perception 8},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[lllumination]
+		The beetle sheds bright light in a 10-foot radius and dim light for an additional 10 feet.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +1 to hit, reach 5ft., one target. \textit{Hit:} 2 (1d6 - 1) slashing damage.
+	\end{monsteraction}
+	
+	A \textbf{giant fire beetle} is a nocturnal creature that takes its name from a pair of glowing glands that give off light. Miners and adventurers prize these creatures. for a giant fire beetle's glands continue to shed light for 1d6 days after the beetle dies. Giant fire beetles are most commonly found underground and in dark forests.
+\end{monsterboxnobg}
+\newpage
+%%%%%%%%%%%%%%%%%%	%
+%			Goat 			%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Goat}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= 4 (1d8),
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{12},
+		DEX	= \stat{10},
+		CON	= \stat{11},
+		INT	= \stat{2},
+		WIS	= \stat{10},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {passive Perception 10},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Charge]
+		 If the goat moves at least 20 feet straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 2 (1d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 10 Strength saving throw or be knocked prone.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Sure-Footed]
+		 The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone.
+	\end{monsteraction}
+	
+	\monstersection{Actions}
+	\begin{monsteraction}[Ram]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} 3 (1d4 + 1) bludgeoning damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Hyena 			%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Hyena}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 11,
+		hitpoints 		= 5 (1d8 + 1),
+		speed		= {50 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{11},
+		DEX	= \stat{13},
+		CON	= \stat{12},
+		INT	= \stat{2},
+		WIS	= \stat{12},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Pack Tactics]
+		The hyena has advantage on an attack roll against a creature if at least one of the hyena's allies is within 5 feet of the creature and the ally isn't incapacitated.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +2 to hit, reach 5ft., one target. \textit{Hit:} 3 (1d6) piercing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Jackal 			%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Jackal}
+	\textit{Small beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints 		= 3 (1d6),
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{8},
+		DEX	= \stat{15},
+		CON	= \stat{11},
+		INT	= \stat{3},
+		WIS	= \stat{12},
+		CHA	= \stat{6}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Hearing and Smell]
+		The jackal has advantage on llisdom (Perception) checks that rely on hearing or smell.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Pack Tactics]
+		The jackal has advantage on an attack roll against a creature if at least one of the jackal's allies is within 5 feet of the creature and the ally isn't incapacitated.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +1 to hit, reach 5ft., one target. \textit{Hit:} 1 (1d4 - 1) piercing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Lizard 			%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Lizard}
+	\textit{Tiny beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= 2 (1d4),
+		speed		= {20 ft., climb 20 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{2},
+		DEX	= \stat{11},
+		CON	= \stat{10},
+		INT	= \stat{1},
+		WIS	= \stat{8},
+		CHA	= \stat{3}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {darkvision 30 ft., passive Perception 9},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +0 to hit, reach 5ft., one target. \textit{Hit:} 1 piercing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Rat	 			%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Rat}
+	\textit{Tiny beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= 1 (1d4 - 1),
+		speed		= {20 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{2},
+		DEX	= \stat{11},
+		CON	= \stat{9},
+		INT	= \stat{2},
+		WIS	= \stat{10},
+		CHA	= \stat{4}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses 		= {darkvision 30 ft., passive Perception 13},
+		languages		= {-},
+		challenge		= 0
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The rat has advantage on Wisdom (Perception) checks that rely on smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +0 to hit, reach 5ft., one target. \textit{Hit:} 1 piercing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%		 	Scorpion 			%
+%%%%%%%%%%%%%%%%%%	%
+Scorpion
+
+%%%%%%%%%%%%%%%%%%	%
+%			Spider 			%
+%%%%%%%%%%%%%%%%%%	%
+Spider
+
+%%%%%%%%%%%%%%%%%%	%
+%			Weasel 			%
+%%%%%%%%%%%%%%%%%%	%
+Weasel
+\newpage
+\section{CR 1/8}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Giant rat 			%
+%%%%%%%%%%%%%%%%%%	%
+\index{Giant rat}
+\index[cr]{CR 1/8!Giant rat}
+Giant rat
+
+%%%%%%%%%%%%%%%%%%	%
+%		Giant weasel 			%
+%%%%%%%%%%%%%%%%%%	%
+Giant weasel
+
+%%%%%%%%%%%%%%%%%%	%
+%			Mastiff 			%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Mastiff}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints 		= 5 (1d8 + 1),
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{13},
+		DEX	= \stat{14},
+		CON	= \stat{12},
+		INT	= \stat{3},
+		WIS	= \stat{12},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 1/8
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Hearing and Smell]
+		The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} 4 (1d6 + 1) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Mule 			%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Mule}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 10,
+		hitpoints 		= 11 (2d8 + 2),
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{14},
+		DEX	= \stat{10},
+		CON	= \stat{13},
+		INT	= \stat{2},
+		WIS	= \stat{10},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses		= {passive Perception 10},
+		languages		= {-},
+		challenge		= 1/8
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Beast of Burden]
+		The mule is considered to be a Large animal for the purpose of determining its carrying capacity.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Sure-Footed]
+		Whenever the mule would be knocked prone, it stays on its feet if it succeeds on a DC 10 Dexterity saving throw.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Hooves]
+		\textit{Melee Weapon Attack:} +2 to hit, reach 5ft., one target. \textit{Hit:} 4 (1d4 + 2) bludgeoning damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Pony 			%
+%%%%%%%%%%%%%%%%%%	%
+Pony
+\newpage
+\section{CR 1/4}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Boar 			%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Boar}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 11,
+		hitpoints 		= 11 (2d8 + 2),
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{13},
+		DEX	= \stat{11},
+		CON	= \stat{12},
+		INT	= \stat{2},
+		WIS	= \stat{9},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		skills			= {},
+		senses 		= {passive Perception 9},
+		languages		= {-},
+		challenge 		= 1/4
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Charge]
+		If the boar moves at least 20 feet straight toward a creature right before hitting it with a tusk attack, the target takes an extra 3 (1d6) slashing damage and must succeed on a DC 11 Strength saving throw or be knocked prone.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Relentless (Recharges after the Boar Finishes a Short or Long Rest)]
+		If the boar takes damage that reduces it to 0 hit points, unless the damage is 7 or more or from a critical hit, it drops to 1 hit point instead.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Tusk]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5ft., one target. \textit{Hit:} 4 (1d6 + 1) slashing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Draft horse		%
+%%%%%%%%%%%%%%%%%%	%Draft horse
+
+%%%%%%%%%%%%%%%%%%	%
+%			Elk	 			%
+%%%%%%%%%%%%%%%%%%	%
+Elk
+
+%%%%%%%%%%%%%%%%%%	%
+%		Giant badger 			%
+%%%%%%%%%%%%%%%%%%	%Giant badger
+
+%%%%%%%%%%%%%%%%%%	%
+%		 Giant centipede 		%
+%%%%%%%%%%%%%%%%%%	%Giant centipede
+
+%%%%%%%%%%%%%%%%%%	%
+%		Giant lizard			%
+%%%%%%%%%%%%%%%%%%	%Giant lizard
+
+%%%%%%%%%%%%%%%%%%	%
+%		Giant wolf spider		%
+%%%%%%%%%%%%%%%%%%	%Giant wolf spider
+
+%%%%%%%%%%%%%%%%%%	%
+%			Panther 			%
+%%%%%%%%%%%%%%%%%%	%\begin{monsterboxnobg}{Panther}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 12,
+		hitpoints		= 13 (3d8),
+		speed		= {50 ft., climb 40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{14},
+		DEX	= \stat{15},
+		CON	= \stat{10},
+		INT	= \stat{3},
+		WIS	= \stat{14},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {Perception +4, Stealth +6},
+		senses		= {passive Perception 14},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The panther has advantage on Wisdom (Perception) checks that rely on smell.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Pounce]
+		If the panther moves at least 20 feet straight toward a creature right before hitting it with a claw attack, the target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the panther can take a bonus action to make one bite attack against it.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} 5 (1d6 + 2) piercing damage.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Claw]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} 4 (1d4 + 2) slashing damage.
+	\end{monsteraction}
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Riding horse 		%
+%%%%%%%%%%%%%%%%%%	%
+Riding horse
+
+%%%%%%%%%%%%%%%%%%	%
+%			Wolf	 			%
+%%%%%%%%%%%%%%%%%%	%\begin{monsterboxnobg}{Wolf}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 13,
+		hitpoints 		= 11 (2d8 + 2),
+		speed		= {40 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{12},
+		DEX	= \stat{15},
+		CON	= \stat{12},
+		INT	= \stat{3},
+		WIS	= \stat{12},
+		CHA	= \stat{6}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3, Stealth +4},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Hearing and Smell]
+		The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Pack Tactics]
+		The wolf has advantage on attack rolls against a creature if at least one of the wolf?s allies is within 5 feet of the creature and isn't incapacitated.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5ft., one target. \textit{Hit:} 7 (2d4 + 2) piercing damage. Ifthe target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone.
+	\end{monsteraction}
+\end{monsterboxnobg}
+\newpage
+\section{CR 1/2}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Ape 				%
+%%%%%%%%%%%%%%%%%%	%
+Ape
+
+%%%%%%%%%%%%%%%%%%	%
+%		Black Bear			%
+%%%%%%%%%%%%%%%%%%	%\begin{monsterboxnobg}{Black Bear}
+	\textit{Medium beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 11 (natural armor),
+		hitpoints 		= 19 (3d8 + 6),
+		speed		= {40 ft., climb 30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{15}, 
+		DEX	= \stat{10},
+		CON	= \stat{14},
+		INT	= \stat{2},
+		WIS	= \stat{12},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+	skills			= {Perception +3},
+	senses		= {passive Perception 11},
+	languages		= {-},
+	challenge		= 1/2
 	]
 	\hline \\[1mm]
 	\begin{monsteraction}[Keen Smell]
@@ -97,15 +729,92 @@
 	\monstersection{Actions}
 	\begin{monsteraction}[Multiattack]
 		The bear makes two attacks, one with its bite and one with its claws.
-	\end{monsteraction}\\
+	\end{monsteraction}
+	
 	\begin{monsteraction}[Bite]
 		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} 5 (1d6 + 2) piercing damage.
-	\end{monsteraction}\\
+	\end{monsteraction}
+	
 	\begin{monsteraction}[Claws]
-		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} 1 (2d4 + 2) slashing damage.
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} 7 (2d4 + 2) slashing damage.
 	\end{monsteraction}	
 \end{monsterboxnobg}
 
+%%%%%%%%%%%%%%%%%%	%
+%			Warhorse 			%
+%%%%%%%%%%%%%%%%%%	%Warhorse
+
+%%%%%%%%%%%%%%%%%%	%
+%			Worg 			%
+%%%%%%%%%%%%%%%%%%	%
+Worg
+\newpage
+\section{CR 1}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Brown Bear 		%
+%%%%%%%%%%%%%%%%%%	%
+\begin{monsterboxnobg}{Brown Bear}
+	\textit{Large beast, unaligned}\\
+	\hline
+	\basics[
+		armorclass	= 11 (natural armor),
+		hitpoints		= 34 (4d10 + 12),
+		speed		= {40 ft., climb 30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{19},
+		DEX	= \stat{10},
+		CON	= \stat{16},
+		INT	= \stat{2},
+		WIS	= \stat{13},
+		CHA	= \stat{7}
+	]
+	\hline
+	\details[
+		skills			= {Perception +3},
+		senses		= {passive Perception 13},
+		languages		= {-},
+		challenge		= 1
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Keen Smell]
+		The bear has advantage on Wisdom (Perception) checks that rely on smell.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Multiattack]
+		The bear makes two attacks, one with its bite and one with its claws.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Bite]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} 8 (1d8 + 4) piercing damage.
+	\end{monsteraction}
+	
+	\begin{monsteraction}[Claws]
+		\textit{Melee Weapon Attack:} +5 to hit, reach 5 ft., one target. \textit{Hit:} 11 (2d6 + 4) slashing damage.
+	\end{monsteraction}	
+\end{monsterboxnobg}
+
+%%%%%%%%%%%%%%%%%%	%
+%			Dire wolf 			%
+%%%%%%%%%%%%%%%%%%	%Dire wolf
+
+%%%%%%%%%%%%%%%%%%	%
+%			Giant hyena		%
+%%%%%%%%%%%%%%%%%%	%Giant hyena
+
+%%%%%%%%%%%%%%%%%%	%
+%			Giant spider		%
+%%%%%%%%%%%%%%%%%%	%Giant spider
+
+%%%%%%%%%%%%%%%%%%	%
+%			Lion 			%
+%%%%%%%%%%%%%%%%%%	%Lion
+
+%%%%%%%%%%%%%%%%%%	%
+%			Tiger 			%
+%%%%%%%%%%%%%%%%%%	%Tiger
 \chapter{Spells}
 \section{Cantrips}
 \spell{Guidance}
@@ -132,7 +841,8 @@ You manifest a minor wonder, a sign of supernatural power, within range. You cre
 	\item You create an instantaneous sound that originates from a point of your choice within range, such as a rumble of thunder, the cry of a raven, or ominous whispers.
 	\item You instantaneously cause an unlocked door or win  dow to fly open or slam shut.
 	\item You alter the appearance of your eyes for 1 minute.
-\end{itemize}If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
+\end{itemize}
+If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
 
 \newpage
 \section{Level 1}
@@ -144,7 +854,8 @@ You manifest a minor wonder, a sign of supernatural power, within range. You cre
 {Concentration, up to 1 minute}
 %
 Up to three creatures of your choice that you can see within range must make Charisma saving throws. Whenever a target that fails this saving throw makes an attack roll or a saving throw before the spell ends, the target must roll a d4 and subtract the number rolled from the attack roll or saving throw.
-\textbf{\textit{At Higher Levels.}} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
+
+\textbf{\textit{At Higher Levels.}} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
 
 \newpage
 \section{Level 2}
@@ -160,4 +871,7 @@ Your spell bolsters your allies with toughness and resolve. Choose up to three c
 \textbf{\textit{At Higher Levels.}} When you cast this spell using
 a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd.
 
+\newpage
+\printindex
+\printindex[cr]
 \end{document}
