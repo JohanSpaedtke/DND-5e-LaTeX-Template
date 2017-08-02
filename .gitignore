@@ -3,7 +3,9 @@
 *.blg
 *.cdx
 *.cnd
+*.fdx
 *.fls
+*.fnd
 *.idx
 *.ilg
 *.ind
@@ -11,5 +13,7 @@
 *.ndx
 *.out
 *.pdf
+*.sdx
+*.snd
 *.synctex.gz
 *.toc
