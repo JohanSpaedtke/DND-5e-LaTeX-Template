@@ -24,6 +24,9 @@
 \definecolor{concentration}{RGB}{0,127,255}
 \definecolor{ritual}{RGB}{50,124,15}
 
+\usepackage{tikz}
+\newcommand{\tikzcircle}[2][black,fill=white]{\tikz[baseline=-0.5ex]\draw[#1,radius=#2] (0,0) circle ;}%
+
 %Spellcasting ability modifier
 \newcommand{\castingModifier}{3}
 
@@ -38,10 +41,91 @@
 
 \title{Regis}
 \author{Tymoran Fateseeker}
+\date{\vspace{-5ex}}
 \maketitle
 
 \dndtoc
 
+\chapter{Prepared}
+\renewcommand\labelitemi{\tikzcircle{4pt}}
+\Large{\textsc{DC\underline{$\hspace{1cm}$}\hspace{1cm}Attack Bonus\underline{$\hspace{1cm}$}}}
+\section{Cantrips}
+\begin{itemize}
+	\renewcommand\labelitemi{{\tikzcircle[fill=lightgray]{4pt}}}
+	\item Blessing of the Trickster
+	\item Guidance
+	\item Light
+	\item Thaumaturgy
+\end{itemize}
+\section{1st Level}
+${\varsigma}\hspace{1cm}\varphi\hspace{1cm}$
+\begin{itemize}
+	\item Bane
+	\item Bless
+	\item[{\tikzcircle[fill=lightgray]{4pt}}] Charm Person
+	\item Command
+	\item Create or Destroy Water 
+	\item Cure Wounds
+	\item Detect Evil and Good 
+	\item Detect Magic
+	\item Detect Poison and Disease 
+	\item[{\tikzcircle[fill=lightgray]{4pt}}] Disguise Self
+	\item Guiding Bolt
+	\item Healing Word
+	\item Inflict Wounds
+	\item Protection from
+	\item Evil and Good Purify Food and Drink 
+	\item Sanctuary
+	\item Shield of Faith
+\end{itemize}
+
+\section{2nd Level}
+$\varsigma\hspace{1cm}\varphi\hspace{1cm}$
+\begin{itemize}
+	\item Aid
+	\item Augury 
+	\item Blindness/Deafness 
+	\item Calm Emotions 
+	\item Continual Flame 
+	\item Enhance Ability
+	\item Find Traps
+	\item Gentle Repose
+	\item Hold Person
+	\item Lesser Restoration 
+	\item Locate Object
+	\item[{\tikzcircle[fill=lightgray]{4pt}}] Mirror Image
+	\item[{\tikzcircle[fill=lightgray]{4pt}}] Pass without Trace
+	\item Prayer of Healing 
+	\item Protection from Poison 
+	\item Silence
+	\item Spiritual Weapon 
+	\item Warding Bond
+	\item Zone of Truth
+\end{itemize}
+\section{3rd Level}
+$\varsigma\hspace{1cm}\varphi\hspace{1cm}$
+\begin{itemize}
+	\item Animate Dead 
+	\item Beacon of Hope 
+	\item Bestow Curse 
+	\item[{\tikzcircle[fill=lightgray]{4pt}}] Blink
+	\item Clairvoyance
+	\item Create Food and Water 
+	\item Daylight
+	\item[{\tikzcircle[fill=lightgray]{4pt}}] Dispel Magic
+	\item Feign Death
+	\item Glyph of Warding 
+	\item Magic Circle
+	\item Mass Healing Word 
+	\item Meld into Stone 
+	\item Protection from Energy 
+	\item Remove Curse
+	\item Revivify
+	\item Sending
+	\item Speak with Dead
+\end{itemize}
+
+\renewcommand\labelitemi{$\bullet$}
 \chapter{Clerical powers}
 \spell{Ritual Casting}
 {Divine power}
@@ -71,15 +155,15 @@ Give a willing creature other than yourself advantage on Dexterity (Stealth) che
 Starting at 6th level, you can use your Channel Divinity to vanish.
 As an action, you become invisible until the end of your next turn. You become visible if you attack or cast a spell.
 
-\spell{Divine Strike}
-{Divine power}
-{--}
-{--}
-{--}
-{--}
-%
-At 8th level, you gain the ability to infuse your weapon strikes with poison'a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra \dice{1d8} poison damage to the target. When you reach 14th level, the extra damage increases to \dice{2d8}.
-
+%\spell{Divine Strike}
+%{Divine power}
+%{--}
+%{--}
+%{--}
+%{--}
+%%
+%At 8th level, you gain the ability to infuse your weapon strikes with poison'a gift from your deity. Once on each of your turns when you hit a creature with a weapon attack, you can cause the attack to deal an extra \dice{1d8} poison damage to the target. When you reach 14th level, the extra damage increases to \dice{2d8}.
+\newpage
 \spell{Invoke Duplicity}
 {Channel Divinity}
 {\color{action} 1 action}
@@ -102,148 +186,19 @@ For the duration, you can cast spells as though you were in the illusion's space
 %
 As an action, you present your holy symbol and speak a prayer censuring the undead. Each undead that can see or hear you within 30 feet of you must make a Wisdom saving throw. If the creature fails its saving throw, it is turned for 1 minute or until it takes any damage.
 
-A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly
-move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.
+A turned creature must spend its turns trying to move as far away from you as it can, and it can't willingly move to a space within 30 feet of you. It also can't take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there's nowhere to move, the creature can use the Dodge action.
 
-\chapter{Trickery Domain Spells}
-\spell{Charm Person}
-{1st-level enchantment}
-{\color{action} 1 action}
-{30 feet}
-{V, S}
-{1 hour}
-%
-You attempt to charm a humanoid you can see within range. It must make a W isdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.
-
-\impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.The creatures must be within 30 feet of each other when you target them.
-
-\spell{Disguise Self}
-{1st-level illusion}
-{\color{action} 1 action}
-{Self}
-{V, S}
-{1 hour}
-%
-You make yourself including your clothing, armor, weapons, and other belongings on your person look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.
-
-The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.
-
-To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.
-
-\spell{Mirror Image}
-{2nd-level illusion}
-{\color{action} 1 action}
-{Self}
-{V, S}
-{1 minute}
-%
-Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates.
-
-Each time a creature targets you with an attack during the spell's duration, roll a d20 to determine whether the attack instead targets one of your duplicates.
-
-If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.
-
-A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.
-
-A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight.
-
-\spell{Pass without Trace}
-{2nd-level abjuration}
-{\color{action} 1 action}
-{Self}
-{V, S, M (ashes from a burned leaf of
-mistletoe and a sprig of spruce)}
-{{\color{concentration}Concentration}, up to 1 hour}
-%
-A veil of shadows and silence radiates from you, masking you and your companions from detection. For the duration, each creature you choose within 30 feet of you (including you) has a +10 bonus to Dexterity (Stealth)checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage.
-
-\spell{Blink}
-{3rd-level transmutation}
-{\color{action} 1 action}
-{Self}
-{V, S}
-{1 minute}
-%
-Roll a d20 at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action.
-
-While on the Ethereal Plane, you can see and hear the plane you originated from, which is cast in shades of gray, and you can't see anything there more than 60 feet away. You can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren't there can't perceive you or interact with you, unless they have the ability to do so.
-
-\spell{Dispel Magic}
-{3rd-level illusion}
-{\color{action} 1 action}
-{120 feet}
-{V, S}
-{Instantaneous}
-%
-Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a successful check, the spell ends.
-
-\impact{At Higher Levels.} When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.
-
-\spell{Dimension Door}
-{4th-level conjuration}
-{\color{action} 1 action}
-{500 feet}
-{V}
-{Instantaneous}
-%
-You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as 200 feet straight downward or upward to the northwest at a 45-degree angle, 300 feet.
-
-You can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.
-
-If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take \dice{4d6} force damage, and the spell fails to teleport you.
-
-\spell{Polymorph}
-{4th-level transmutation}
-{\color{action} 1 action}
-{60 feet}
-{V, S, M (a caterpillar cocoon)}
-{{\color{concentration}Concentration}, up to 1 hour}
-%
-This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw.
-
-The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.
-
-The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.
-
-The creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.
-
-The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.
-
-\spell{Dominate Person}
-{5th-level enchantment}
-{\color{action} 1 action}
-{60 feet}
-{V, S}
-{{\color{concentration}Concentration}, up to 1 minute}
-%
-You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.
-
-While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as Attack that creature, Run over there, or Fetch that object. If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.
-
-You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.
-
-Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.
-
-\impact{At Higher Levels.} When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours.
+Starting at 5th level, when an undead fails its saving throw against your Turn Undead feature, the creature is instantly destroyed if its challenge rating is at or below a certain threshold, as shown in the Destroy Undead table.
 \newpage
-\spell{Modify Memory}
-{5th-level enchantment}
-{\color{action} 1 action}
-{30 feet}
-{V, S}
-{{\color{concentration}Concentration}, up to 1 minute}
-%
-You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.
+\begin{dndtable}[XX]
+	\textbf{Cleric Level}	& \textbf{Destroys Undead of CR ...} \\
+	5  				& 1/2 or lower	\\
+	8  				& 1 or lower	\\
+	11  				& 2 or lower	\\
+	14				& 3 or lower	\\
+	14				& 4 or lower
+\end{dndtable}
 
-While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.
-
-You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.
-
-A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.
-
-A remove curse or greater restoration spell cast on the target restores the creature's true memory.
-
-\impact{At Higher Levels.} If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level).
 
 \chapter{Cleric Spells}
 \section{Cantrips}
@@ -290,8 +245,8 @@ You manifest a minor wonder, a sign of supernatural power, within range. You cre
 \end{itemize}
 If you cast this spell multiple times, you can have up to three of its 1-minute effects active at a time, and you can dismiss such an effect as an action.
 
-\newpage
-\section{Level 1}
+\clearpage
+\section{1st Level}
 \spell{Bane}
 {1st-level enchantment}
 {\color{action} 1 action}
@@ -313,6 +268,17 @@ Up to three creatures of your choice that you can see within range must make Cha
 You bless up to three creatures of your choice within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target can roll a d4 and add the number rolled to the attack roll or saving throw.
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.
+
+\spell{Charm Person}
+{1st-level enchantment}
+{\color{action} 1 action}
+{30 feet}
+{V, S}
+{1 hour}
+%
+You attempt to charm a humanoid you can see within range. It must make a W isdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.
+
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.The creatures must be within 30 feet of each other when you target them.
 
 \spell{Command}
 {1st-level enchantment}
@@ -336,7 +302,7 @@ Some typical commands and their effects follow. You might issue a command other 
 \impact{Halt.} The target doesn't move and takes no actions. A flying creature stays aloft, provided that it is able to do so. If it must move to stay aloft, it flies the minimum distance needed to remain in the air.
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional creature for each slot level above 1st. The creatures must be within 30 feet of each other when you target them.
-
+\newpage
 \spell{Create or Destroy Water}
 {1st-level transmutation}
 {\color{action} 1 action}
@@ -352,7 +318,6 @@ water within range in an open container. Alternatively, the water falls as rain 
 \impact{Destroy Water.} You destroy up to 10 gallons of water in an open container within range. Alternatively, you destroy fog in a 30-foot cube within range.
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, you create or destroy 10 additional gallons of water, or the size of the cube increases by 5 feet, for each slot level above 1st.
-
 \newpage
 \spell{Cure Wounds}
 {1st-level evocation}
@@ -400,6 +365,19 @@ For the duration, you can sense the presence and location of poisons, poisonous 
 
 The spell can penetrate most barriers, but it is blocked by 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt.
 
+\spell{Disguise Self}
+{1st-level illusion}
+{\color{action} 1 action}
+{Self}
+{V, S}
+{1 hour}
+%
+You make yourself including your clothing, armor, weapons, and other belongings on your person look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.
+
+The changes wrought by this spell fail to hold up to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or would feel your head and hair. If you use this spell to appear thinner than you are, the hand of someone who reaches out to touch you would bump into you while it was seemingly still in midair.
+
+To discern that you are disguised, a creature can use its action to inspect your appearance and must succeed on an Intelligence (Investigation) check against your spell save DC.
+
 \spell{Guiding Bolt}
 {1st-level evocation}
 {\color{action} 1 action}
@@ -431,7 +409,7 @@ Make a melee spell attack against a creature you can reach. On a hit, the target
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, the damage increases by
 \dice{1d10} for each slot level above 1st.
-
+\newpage
 \spell{Protection from Evil and Good}
 {1st-level abjuration}
 {\color{action} 1 action}
@@ -470,8 +448,8 @@ You ward a creature within range against attack. Until the spell ends, any creat
 %
 A shimmering field appears and surrounds a creature of your choice within range, granting it a +2 bonus to AC for the duration.
 
-\newpage
-\section{Level 2}
+\clearpage
+\section{2nd Level}
 \spell{Aid}
 {2nd-level abjuration}
 {\color{action}1 action}
@@ -483,7 +461,7 @@ Your spell bolsters your allies with toughness and resolve. Choose up to three c
 
 \impact{At Higher Levels.} When you cast this spell using
 a spell slot of 3rd level or higher, a target's hit points increase by an additional 5 for each slot level above 2nd.
-
+\newpage
 \spell{Augury}
 {2nd-level divination {\color{ritual}(ritual)}}
 {1 minute}
@@ -511,7 +489,7 @@ Ifyou cast the spell two or more times before completing your next long rest, th
 You can blind or deafen a foe. Choose one creature that you can see within range to make a Constitution saving throw. If it fails, the target is either blinded or deafened (your choice) for the duration. At the end of each of its turns, the target can make a Constitution saving throw. On a success, the spell ends.
 
 \impact{At Higher Levels.} When you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.
-
+\newpage
 \spell{Calm Emotions}
 {2nd-level enchantment}
 {\color{action}1 action}
@@ -524,7 +502,7 @@ You attempt to suppress strong emotions in a group of people. Each humanoid in a
 You can suppress any effect causing a target to be charmed or frightened. When this spell ends, any suppressed effect resumes, provided that its duration has not expired in the meantime.
 
 Alternatively, you can make a target indifferent about creatures of your choice that it is hostile toward. This indifference ends if the target is attacked or harmed by a spell or if it witnesses any of its friends being harmed. When the spell ends, the creature becomes hostile again, unless the DM rules otherwise.
-
+\newpage
 \spell{Continual Flame}
 {2nd-level evocation}
 {\color{action}1 action}
@@ -543,20 +521,20 @@ A flame, equivalent in brightness to a torch, springs forth from an object that 
 %
 You touch a creature and bestow upon it a magical enhancement. Choose one of the following effects; the target gains that effect until the spell ends.
 
-\impact{Bear’s Endurance} The target has advantage on Constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends.
+\impact{Bear's Endurance} The target has advantage on Constitution checks. It also gains 2d6 temporary hit points, which are lost when the spell ends.
 
 \impact{Bull's Strength.} The target has advantage on Strength checks, and his or her carrying capacity doubles.
 
-\impact{Cat’s Grace.} The target has advantage on Dexterity checks. It also doesn't take damage from falling 20 feet or less if it isn't incapacitated.
+\impact{Cat's Grace.} The target has advantage on Dexterity checks. It also doesn't take damage from falling 20 feet or less if it isn't incapacitated.
 
-\impact{Eagle’s Splendor.} The target has advantage on Charisma checks.
+\impact{Eagle's Splendor.} The target has advantage on Charisma checks.
 
-\impact{Fox’s Cunning.} The target has advantage on Intelligence checks.
+\impact{Fox's Cunning.} The target has advantage on Intelligence checks.
 
-\impact{Owl’s Wisdom.} The target has advantage on Wisdom checks.
+\impact{Owl's Wisdom.} The target has advantage on Wisdom checks.
 
 \impact{At Higher Levels.} W hen you cast this spell using a spell slot of 3rd level or higher, you can target one additional creature for each slot level above 2nd.
-
+\newpage
 \spell{Find Traps}
 {2nd-level divination}
 {\color{action}1 action}
@@ -611,6 +589,32 @@ Describe or name an object that is familiar to you. You sense the direction to t
 The spell can locate a specific object known to you, as long as you have seen it up close within 30 feet at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.
 
 This spell can't locate an object if any thickness of lead, even a thin sheet, blocks a direct path between you and the object.
+
+\spell{Mirror Image}
+{2nd-level illusion}
+{\color{action} 1 action}
+{Self}
+{V, S}
+{1 minute}
+%
+Three illusory duplicates of yourself appear in your space. Until the spell ends, the duplicates move with you and mimic your actions, shifting position so it's impossible to track which image is real. You can use your action to dismiss the illusory duplicates.
+
+Each time a creature targets you with an attack during the spell's duration, roll a d20 to determine whether the attack instead targets one of your duplicates.
+
+If you have three duplicates, you must roll a 6 or higher to change the attack's target to a duplicate. With two duplicates, you must roll an 8 or higher. With one duplicate, you must roll an 11 or higher.
+
+A duplicate's AC equals 10 + your Dexterity modifier. If an attack hits a duplicate, the duplicate is destroyed. A duplicate can be destroyed only by an attack that hits it. It ignores all other damage and effects. The spell ends when all three duplicates are destroyed.
+
+A creature is unaffected by this spell if it can't see, if it relies on senses other than sight, such as blindsight, or if it can perceive illusions as false, as with truesight.
+
+\spell{Pass without Trace}
+{2nd-level abjuration}
+{\color{action} 1 action}
+{Self}
+{V, S, M (ashes from a burned leaf of mistletoe and a sprig of spruce)}
+{{\color{concentration}Concentration}, up to 1 hour}
+%
+A veil of shadows and silence radiates from you, masking you and your companions from detection. For the duration, each creature you choose within 30 feet of you (including you) has a +10 bonus to Dexterity (Stealth)checks and can't be tracked except by magical means. A creature that receives this bonus leaves behind no tracks or other traces of its passage.
 
 \spell{Prayer of Healing}
 {2nd-level evocation}
@@ -677,10 +681,355 @@ The spell ends if you drop to 0 hit points or if you and the target become separ
 {V, S}
 {10 minutes}
 %
-You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point o f your choice within range. Until the spell ends, a creature that enters the spell’s area for the first time on a turn or starts its turn there must make a Charisma saving throw. On a failed save, a creature can’t speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw.
+You create a magical zone that guards against deception in a 15-foot-radius sphere centered on a point o f your choice within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there must make a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether each creature succeeds or fails on its saving throw.
 
 An affected creature is aware of the spell and can thus avoid answering questions to which it would normally respond with a lie. Such a creature can be evasive in its answers as long as it remains within the boundaries of the truth.
 
+\clearpage
+\section{3rd Level}
+
+\spell{Animate Dead}
+{3rd-level necromancy}
+{1 minute}
+{10 feet}
+{V, S, M (a drop of blood, a piece of flesh, and a pinch of bone dust)}
+{Instantaneous}
+%
+This spell creates an undead servant. Choose a pile of bones or a corpse of a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry of life, raising it as an undead creature. The target becomes a skeleton if you chose bones or a zombie if you chose a corpse.
+
+On each of your turns, you can use a bonus action to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any or all of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move during its next turn, or you can issue a general command, such as to guard a particular chamber or corridor. If you issue no commands, the creature only defends itself against hostile creatures. Once given an order, the creature continues to follow it until its task is complete.
+
+The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell, rather than animating a new one.
+
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 4th level or higher, you animate or reassert control over two additional undead creatures for each slot level above 3rd. Each of the creatures must come from a different corpse or pile of bones.
+
+\newpage
+\begin{monsterbox}{Skeleton}
+	\textit{Medium undead, lawful evil}\\
+	\hline
+	\basics[
+		armorclass	= 13 (armor scraps),
+		hitpoints 		= \dice{2d8 + 4},
+		speed		= {30 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{10},
+		DEX	= \stat{14},
+		CON	= \stat{15},
+		INT	= \stat{6},
+		WIS	= \stat{8},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		damagevulnerabilities = bludgeoning,
+		damageimmunities = poison,
+		conditionimmunities = {exhaustion, poisoned},
+		skills			= {},
+		senses		= {darkvision 60 ft., passive Perception 9},
+		languages		= {understands all languages it knew in life but can't speak},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Shortsword]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d6 + 2} piercing damage.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Shortbow]
+		\textit{Ranged Weapon Attack:} +4 to hit, range 80/320 ft., one target. \textit{Hit:} \dice{1d6 + 2} piercing damage.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Zombie}
+	\textit{Medium undead, lawful evil}\\
+	\hline
+	\basics[
+		armorclass	= 8,
+		hitpoints 		= \dice{3d8 + 9},
+		speed		= {20 ft.}
+	]
+	\hline
+	\stats[
+		STR	= \stat{13},
+		DEX	= \stat{6},
+		CON	= \stat{16},
+		INT	= \stat{3},
+		WIS	= \stat{6},
+		CHA	= \stat{5}
+	]
+	\hline
+	\details[
+		savingthrows = Wis +0,
+		damageimmunities = poison,
+		conditionimmunities = {poisoned},
+		skills			= {},
+		senses		= {darkvision 60 ft., passive Perception 8},
+		languages		= {understands all languages it knew in life but can't speak},
+		challenge		= 1/4
+	]
+	\hline \\[1mm]
+	\begin{monsteraction}[Undead Fortitude]
+		If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Slam]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d6 + 1} bludgeoning damage.
+	\end{monsteraction}
+\end{monsterbox}
+\color{black}
+\spell{Beacon of Hope}
+{3rd-level abjuration}
+{{\color{action}1 action}}
+{30 feet}
+{V, S}
+{{\color{concentration}Concentration}, up to 1 minute}
+%
+This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing. 
+\spell{Bestow Curse}
+{3rd-level necromancy}
+{{\color{action}1 action}}
+{Touch}
+{V, S}
+{{\color{concentration}Concentration}, up to 1 minute}
+You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:
+\begin{itemize}	\item Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.	\item While cursed, the target has disadvantage on attack rolls against you.	\item While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.	\item While the target is cursed, your attacks and spells deal an extra \dice{1d8} necrotic damage to the target.
+\end{itemize}A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.
+
+\impact{At Higher Levels.} If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you usea 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.
+
+\spell{Blink}
+{3rd-level transmutation}
+{\color{action} 1 action}
+{Self}
+{V, S}
+{1 minute}
+%
+Roll a d20 at the end of each of your turns for the duration of the spell. On a roll of 11 or higher, you vanish from your current plane of existence and appear in the Ethereal Plane (the spell fails and the casting is wasted if you were already on that plane). At the start of your next turn, and when the spell ends if you are on the Ethereal Plane, you return to an unoccupied space of your choice that you can see within 10 feet of the space you vanished from. If no unoccupied space is available within that range, you appear in the nearest unoccupied space (chosen at random if more than one space is equally near). You can dismiss this spell as an action.
+
+While on the Ethereal Plane, you can see and hear the plane you originated from, which is cast in shades of gray, and you can't see anything there more than 60 feet away. You can only affect and be affected by other creatures on the Ethereal Plane. Creatures that aren't there can't perceive you or interact with you, unless they have the ability to do so.
+
+\spell{Clairvoyance}
+{3rd-level divination}
+{10 minutes}
+{1 mile}
+{V, S, M (a focus worth at least {\color{cost}100 \nolinebreak gp}, either a jeweled horn for hearing or a glass eye for seeing)}
+{{\color{concentration}Concentration}, up to 10 minutes}
+You create an invisible sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The sensor remains in place for the duration, and it can't be attacked or otherwise interacted with.
+
+When you cast the spell, you choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As your action, you can switch between seeing and hearing.
+
+A creature that can see the sensor (such as a creature benefiting from see invisibility or truesight) sees a luminous, intangible orb about the size of your fist.
+
+\spell{Create Food and Water}
+{3rd-level conjuration}
+{\color{action}1 action}
+{30 feet}
+{V, S}
+{Instantaneous}
+You create 45 pounds of food and 30 gallons of water on the ground or in containers within range, enough to sustain up to fifteen humanoids or five steeds for 24 hours. The food is bland but nourishing, and spoils if uneaten after 24 hours. The water is clean and doesn't go bad.
+\newpage
+\spell{Daylight}
+{3rd-level evocation}
+{\color{action}1 action}
+{60 feet}
+{V, S}
+{1 hour}
+A 60-foot-radius sphere of light spreads out from a point you choose within range. The sphere is bright light and sheds dim light for an additional 60 feet.
+
+If you chose a point on an object you are holding or one that isn't being worn or carried, the light shines from the object and moves with it. Completely covering the affected object with an opaque object, such as a bowl or a helm, blocks the light.
+
+If any of this spell's area overlaps with an area of darkness created by a spell of 3rd level or lower, the spell that created the darkness is dispelled.
+
+\spell{Dispel Magic}
+{3rd-level abjuration}
+{\color{action}1 action}
+{120 feet}
+{V, S}
+{Instantaneous}
+Choose one creature, object, or magical effect within range. Any spell of 3rd level or lower on the target ends. For each spell of 4th level or higher on the target, make an ability check using your spellcasting ability. The DC equals 10 + the spell's level. On a successful check, the spell ends.
+
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 4th level or higher, you automatically end the effects of a spell on the target if the spell's level is equal to or less than the level of the spell slot you used.
+
+\spell{Feign Death}
+{3rd-level necromancy {\color{ritual}(ritual)}}
+{\color{action}1 action}
+{Touch}
+{V, S, M (a pinch of graveyard dirt)}
+{1 hour}
+You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.
+
+For the spell's duration, or until you use an action to touch the target and dismiss the spell, the target appears dead to all outward inspection and to spells used to determine the target's status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell's effect, the disease and poison have no effect until the spell ends.
+
+\spell{Glyph of Warding}
+{3rd-level abjuration}
+{\color{action}1 action}
+{Touch}
+{V, S, M (incense and powdered diamond worth at least {\color{cost}200 gp}, which the spell consumes)}
+{Until dispelled or triggered} 
+When you cast this spell, you inscribe a glyph that harms other creatures, either upon a surface (such as a table or a section of floor or wall) or within an object that can be closed (such as a book, a scroll, or a treasure chest) to conceal the glyph. If you choose a surface, the glyph can cover an area of the surface no larger than 10 feet in diameter. If you choose an object, that object must remain in its place; if the object is moved more than 10 feet from where you cast this spell, the glyph is broken, and the spell ends without being triggered.
+
+The glyph is nearly invisible and requires a successful Intelligence (Investigation) check against your spell save DC to be found.
+
+You decide what triggers the glyph when you cast the spell. For glyphs inscribed on a surface, the most typical triggers include touching or standing on the glyph, removing another object covering the glyph, approaching within a certain distance of the glyph, or manipulating the object on which the glyph is inscribed. For glyphs inscribed within an object, the most common triggers include opening that object, approaching within a certain distance of the object, or seeing or reading the glyph. Once a glyph is triggered, this spell ends.
+
+You can further refine the trigger so the spell activates only under certain circumstances or according to physical characteristics (such as height or weight), creature kind (for example, the ward could be set to affect aberrations or drow), or alignment. You can also set conditions for creatures that don't trigger the glyph, such as those who say a certain password.
+
+When you inscribe the glyph, choose explosive runes or a spell glyph.
+
+\impact{Explosive Runes.} When triggered, the glyph erupts with magical energy in a 20-foot-radius sphere centered on the glyph. The sphere spreads around corners. Each creature in the area must make a Dexterity saving throw. A creature takes \dice{5d8} acid, cold, fire, lightning, or thunder damage on a failed saving throw (your choice when you create the glyph), or half as much damage on a successful one.
+
+\impact{Spell Glyph.} You can store a prepared spell of 3rd level or lower in the glyph by casting it as part of creating the glyph. The spell must target a single creature or an area. The spell being stored has no immediate effect when cast in this way. When the glyph is triggered, the stored spell is cast. If the spell has a target, it targets the creature that triggered the glyph. If the spell affects an area, the area is centered on that creature. If the spell summons hostile creatures or creates harmful objects or traps, they appear as close as possible to the intruder and attack it. If the spell requires concentration, it lasts until the end of its full duration.
+
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 4th level or higher, the damage of an explosive runes glyph increases by \dice{1d8} for each slot level above 3rd. If you create a spell glyph, you can store any spell of up to the same level as the slot you use for the glyph of warding.
+
+\spell{Magic Circle}
+{3rd-level abjuration}
+{1 minute}
+{10 feet}
+{V, S, M (holy water or powdered silver and iron worth at least {\color{cost}100 gp}, which the spell consumes)}
+{1 hour}
+You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on a point on the ground that you can see within range. Glowing runes appear wherever the cylinder intersects with the floor or other surface.
+
+Choose one or more of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways:
+\begin{itemize}
+	\item The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use tele  portation or interplanar travel to do so, it must first succeed on a Charisma saving throw.	\item The creature has disadvantage on attack rolls against targets within the cylinder.	\item Targets within the cylinder can't be charmed, fright  ened, or possessed by the creature.
+\end{itemize}
+When you cast this spell, you can elect to cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the cylinder and protecting targets outside it.
+
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 4th level or higher, the duration increases by 1 hour for each slot level above 3rd.
+
+\spell{Mass Healing Word}
+{3rd-level evocation}
+{\color{bonusaction} 1 bonus action}
+{60 feet}
+{V}
+{Instantaneous}
+As you call out words of restoration, up to six creatures of your choice that you can see within range regain hit points equal to \dice{1d4 + \castingModifier}. This spell has no effect on undead or constructs.
+
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 4th level or higher, the healing increases by \dice{1d4} for each slot level above 3rd.
+
+\spell{Meld into Stone}
+{3rd-level transmutation {\color{ritual}(ritual)}}
+{\color{action} 1 action}
+{Touch}
+{V, S}
+{8 hours}
+You step into a stone object or surface large enough to fully contain your body, melding yourself and all the equipment you carry with the stone for the duration. Using your movement, you step into the stone at a point you can touch. Nothing of your presence remains visible or otherwise detectable by nonmagical senses.
+
+While merged with the stone, you can't see what occurs outside it, and any Wisdom (Perception) checks you make to hear sounds outside it are made with disadvantage. You remain aware of the passage of time and can cast spells on yourself while merged in the stone. You can use your movement to leave the stone where you entered it, which ends the spell. You otherwise can't move.
+
+Minor physical damage to the stone doesn't harm you, but its partial destruction or a change in its shape (to the extent that you no longer fit within it) expels you and deals \dice{6d6} bludgeoning damage to you. The stone's complete destruction (or transmutation into a different substance) expels you and deals 50 bludgeoning damage to you. If expelled, you fall prone in an unoccupied space closest to where you first entered.
+
+\spell{Protection from Energy}
+{3rd-level abjuration}
+{\color{action} 1 action}
+{Touch}
+{V, S}
+{{\color{concentration}Concentration}, up to 1 hour}
+For the duration, the willing creature you touch has resistance to one damage type of your choice: acid, cold, fire, lightning, or thunder.
+
+\spell{Remove Curse}
+{3rd-level abjuration}
+{\color{action} 1 action}
+{Touch}
+{V, S}
+{Instantaneous}
+At your touch, all curses affecting one creature or object end. If the object is a cursed magic item, its curse remains, but the spell breaks its owner's attunement to the object so it can be removed or discarded.
+
+\spell{Revivify}
+{3rd-level conjuration}
+{\color{action} 1 action}
+{Touch}
+{V, S, M (diamonds worth {\color{cost}300 gp}, which the spell consumes)}
+{Instantaneous}
+You touch a creature that has died within the last minute. That creature returns to life with 1 hit point. This spell can't return to life a creature that has died of old age, nor can it restore any missing body parts.
+
+\spell{Sending}
+{3rd-level evocation}
+{\color{action} 1 action}
+{Unlimited}
+{V, S, M (a short piece of fine copper wire)}
+{1 round}
+You send a short message of twenty-five words or less to a creature with which you are familiar. The creature hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables creatures with Intelligence scores of at least 1 to understand the meaning of your message.
+
+You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a 5 percent chance that the message doesn't arrive.
+
+\spell{Speak with Dead}
+{3rd-level necromancy}
+{\color{action} 1 action}
+{10 feet}
+{V, S, M (burning incense)}
+{10 minutes}
+You grant the semblance of life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose. The corpse must still have a mouth and can't be undead. The spell fails if the corpse was the target of this spell within the last 10 days.
+
+Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer ifyou are hostile to it or it recognizes you as an enemy. This spell doesn't return the creature's soul to its body, only its animating spirit. Thus, the corpse can't learn new information, doesn't comprehend anything that has happened since it died, and can't speculate about future events.
+
+%\spell{Dimension Door}
+%{4th-level conjuration}
+%{\color{action} 1 action}
+%{500 feet}
+%{V}
+%{Instantaneous}
+%%
+%You teleport yourself from your current location to any other spot within range. You arrive at exactly the spot desired. It can be a place you can see, one you can visualize, or one you can describe by stating distance and direction, such as 200 feet straight downward or upward to the northwest at a 45-degree angle, 300 feet.
+%
+%You can bring along objects as long as their weight doesn't exceed what you can carry. You can also bring one willing creature of your size or smaller who is carrying gear up to its carrying capacity. The creature must be within 5 feet of you when you cast this spell.
+%
+%If you would arrive in a place already occupied by an object or a creature, you and any creature traveling with you each take \dice{4d6} force damage, and the spell fails to teleport you.
+
+%\spell{Polymorph}
+%{4th-level transmutation}
+%{\color{action} 1 action}
+%{60 feet}
+%{V, S, M (a caterpillar cocoon)}
+%{{\color{concentration}Concentration}, up to 1 hour}
+%%
+%This spell transforms a creature that you can see within range into a new form. An unwilling creature must make a Wisdom saving throw to avoid the effect. A shapechanger automatically succeeds on this saving throw.
+%
+%The transformation lasts for the duration, or until the target drops to 0 hit points or dies. The new form can be any beast whose challenge rating is equal to or less than the target's (or the target's level, if it doesn't have a challenge rating). The target's game statistics, including mental ability scores, are replaced by the statistics of the chosen beast. It retains its alignment and personality.
+%
+%The target assumes the hit points of its new form. When it reverts to its normal form, the creature returns to the number of hit points it had before it transformed. If it reverts as a result of dropping to 0 hit points, any excess damage carries over to its normal form. As long as the excess damage doesn't reduce the creature's normal form to 0 hit points, it isn't knocked unconscious.
+%
+%The creature is limited in the actions it can perform by the nature of its new form, and it can't speak, cast spells, or take any other action that requires hands or speech.
+%
+%The target's gear melds into the new form. The creature can't activate, use, wield, or otherwise benefit from any of its equipment.
+
+%\spell{Dominate Person}
+%{5th-level enchantment}
+%{\color{action} 1 action}
+%{60 feet}
+%{V, S}
+%{{\color{concentration}Concentration}, up to 1 minute}
+%%
+%You attempt to beguile a humanoid that you can see within range. It must succeed on a Wisdom saving throw or be charmed by you for the duration. If you or creatures that are friendly to you are fighting it, it has advantage on the saving throw.
+%
+%While the target is charmed, you have a telepathic link with it as long as the two of you are on the same plane of existence. You can use this telepathic link to issue commands to the creature while you are conscious (no action required), which it does its best to obey. You can specify a simple and general course of action, such as Attack that creature, Run over there, or Fetch that object. If the creature completes the order and doesn't receive further direction from you, it defends and preserves itself to the best of its ability.
+%
+%You can use your action to take total and precise control of the target. Until the end of your next turn, the creature takes only the actions you choose, and doesn't do anything that you don't allow it to do. During this time you can also cause the creature to use a reaction, but this requires you to use your own reaction as well.
+%
+%Each time the target takes damage, it makes a new Wisdom saving throw against the spell. If the saving throw succeeds, the spell ends.
+%
+%\impact{At Higher Levels.} When you cast this spell using a 6th-level spell slot, the duration is concentration, up to 10 minutes. When you use a 7th-level spell slot, the duration is concentration, up to 1 hour. When you use a spell slot of 8th level or higher, the duration is concentration, up to 8 hours.
+
+%\spell{Modify Memory}
+%{5th-level enchantment}
+%{\color{action} 1 action}
+%{30 feet}
+%{V, S}
+%{{\color{concentration}Concentration}, up to 1 minute}
+%%
+%You attempt to reshape another creature's memories. One creature that you can see must make a Wisdom saving throw. If you are fighting the creature, it has advantage on the saving throw. On a failed save, the target becomes charmed by you for the duration. The charmed target is incapacitated and unaware of its surroundings, though it can still hear you. If it takes any damage or is targeted by another spell, this spell ends, and none of the target's memories are modified.
+%
+%While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity and exacting detail, change its memory of the details of the event, or create a memory of some other event.
+%
+%You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you have finished describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.
+%
+%A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as implanting a memory of how much the creature enjoyed dousing itself in acid, is dismissed, perhaps as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature in a significant manner.
+%
+%A remove curse or greater restoration spell cast on the target restores the creature's true memory.
+%
+%\impact{At Higher Levels.} If you cast this spell using a spell slot of 6th level or higher, you can alter the target's memories of an event that took place up to 7 days ago (6th level), 30 days ago (7th level), 1 year ago (8th level), or any time in the creature's past (9th level).
 \newpage
 \printindex
 \end{document}
