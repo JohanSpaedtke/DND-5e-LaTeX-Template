@@ -1,0 +1,125 @@
+\documentclass[10pt,twoside,twocolumn,openany]{book}
+\usepackage{etex}
+\reserveinserts{28}
+
+\usepackage[bg-print]{dnd}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{ragged2e}
+
+\usepackage{index}
+\makeindex
+
+\widowpenalties 1 10000
+\raggedbottom
+
+\usepackage{color}
+\definecolor{cost}{RGB}{218,165,32}
+
+\definecolor{reaction}{RGB}{143,129,18}
+\definecolor{bonusaction}{RGB}{143,69,18}
+\definecolor{action}{RGB}{22,39,97}
+
+\definecolor{concentration}{RGB}{0,127,255}
+\definecolor{ritual}{RGB}{50,124,15}
+
+\usepackage{tikz}
+\newcommand{\tikzcircle}[2][black,fill=white]{\tikz[baseline=-0.5ex]\draw[#1,radius=#2] (0,0) circle ;}%
+
+%Spellcasting ability modifier
+\newcommand{\castingModifier}{3}
+
+\newcommand\impact[1]{
+	\textbf{\textit{#1}}
+}
+
+\setlength{\RaggedRightParindent}{\parindent}
+\RaggedRight
+
+\begin{document}
+
+\chapter{A}
+You attempt to charm a humanoid you can see within range. It must make a W isdom saving throw, and does so with advantage if you or your companions are fighting it. If it fails the saving throw, it is charmed by you until the spell ends or until you or your companions do anything harmful to it. The charmed creature regards you as a friendly acquaintance. When the spell ends, the creature knows it was charmed by you.
+\impact{At Higher Levels.} When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.The creatures must be within 30 feet of each other when you target them.
+\spell{A}
+{a}
+{a}
+{a}
+{a}
+{a}
+\spell{a}
+{a}
+{a}
+{a}
+{a}
+{a}
+\spell{A}
+{A}
+{A}
+{A}
+{A}
+{A}
+You make yourself including your clothing, armor, weapons, and other belongings on your person look different until the spell ends or until you use your action to dismiss it. You can seem 1 foot shorter or taller and can appear thin, fat, or in between. You can't change your body type, so you must adopt a form that has the same basic arrangement of limbs. Otherwise, the extent of the illusion is up to you.
+The changes wrought by this spell fail to hold aup to physical inspection. For example, if you use this spell to add a hat to your outfit, objects pass through the hat, and anyone who touches it would feel nothing or woaaaaaaaaaa
+\newpage
+\begin{monsterbox}{Skeleton}
+	\textit{Medium undead, lawful evil}\\
+	\hline
+	\basics[
+	]
+	\hline
+	\stats[
+	]
+	\hline
+	\details[
+		damagevulnerabilities = bludgeoning,
+		damageimmunities = poison,
+		conditionimmunities = {exhaustion, poisoned},
+		senses		= {darkvision 60 ft., passive Perception 9},
+		languages		= {understands all languages it knew in life but can't speak},
+	]
+	\hline \\[1mm]
+	\monstersection{Actions}
+	\begin{monsteraction}[Shortsword]
+		\textit{Melee Weapon Attack:} +4 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d6 + 2} piercing damage.
+	\end{monsteraction}\\
+	\begin{monsteraction}[Shortbow]
+		\textit{Ranged Weapon Attack:} +4 to hit, range 80/320 ft., one target. \textit{Hit:} \dice{1d6 + 2} piercing damage.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Zombie}
+	\textit{Medium undead, lawful evil}\\
+	\hline
+	\basics[
+	]
+	\hline
+	\stats[
+	]
+	\hline
+	\details[
+		savingthrows = Wis +0,
+		damageimmunities = poison,
+		conditionimmunities = {poisoned},
+		senses		= {darkvision 60 ft., passive Perception 8},
+		languages		= {understands all languages it knew in life but can't speak},
+	]
+	\hline \\[2mm]
+	\begin{monsteraction}[Undead Fortitude]
+		If damage reduces the zombie to 0 hit points, it must make a Constitution saving throw with a DC of 5 + the damage taken, unless the damage is radiant or from a critical hit. On a success, the zombie drops to 1 hit point instead.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Slam]
+		\textit{Melee Weapon Attack:} +3 to hit, reach 5 ft., one target. \textit{Hit:} \dice{1d6 + 1} bludgeoning damage.
+	\end{monsteraction}
+\end{monsterbox}
+\newpage
+\spell{a}
+{a}
+{a}
+{a}
+{a}
+{a}
+This spell bestows hope and vitality. Choose any num
+\end{document}
