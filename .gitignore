@@ -6,8 +6,11 @@
 *.ilg
 *.ind
 *.log
+*.mp
 *.ndx
 *.out
 *.pdf
 *.synctex.gz
 *.toc
+*.top
+*.tui
