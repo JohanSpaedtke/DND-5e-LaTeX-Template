@@ -1,6 +1,7 @@
 *.aux
 *.bbl
 *.blg
+*.dvi
 *.fls
 *.idx
 *.ilg
@@ -10,6 +11,7 @@
 *.ndx
 *.out
 *.pdf
+*.ps
 *.synctex.gz
 *.toc
 *.top
