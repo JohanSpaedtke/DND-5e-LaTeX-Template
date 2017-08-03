@@ -10,6 +10,7 @@
 *.ilg
 *.ind
 *.log
+*.mp
 *.ndx
 *.out
 *.pdf
@@ -17,3 +18,5 @@
 *.snd
 *.synctex.gz
 *.toc
+*.top
+*.tui
