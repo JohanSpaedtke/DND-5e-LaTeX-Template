@@ -145,6 +145,21 @@ You can cast a cleric spell as a ritual if that spell has the ritual tag and you
 %
 Give a willing creature other than yourself advantage on Dexterity (Stealth) checks. This blessing lasts for 1 hour or until you use this feature again.
 
+\spell{Channel Divinity}
+{Divine power}
+{}
+{Self}
+{--}
+{--}
+%
+At 2nd level, you gain the ability to channel divine energy directly from your deity, using that energy to fuel magical effects. You start with two such effects: Turn Undead and an effect determined by your domain. Some domains grant you additional effects as you advance in levels, as noted in the domain description.
+
+When you use your Channel Divinity, you choose which effect to create. You must then finish a short or Long Rest to use your Channel Divinity again.
+
+Some Channel Divinity effects require saving throws. When you use such an effect from this class, the DC equals your cleric spell save DC.
+
+Beginning at 6th level, you can use your Channel Divinity twice between rests, and beginning at 18th level, you can use it three times between rests. When you finish a short or Long Rest, you regain your expended uses.
+
 \spell{Cloak of Shadows}
 {Channel Divinity}
 {\color{action} 1 action}
@@ -785,7 +800,8 @@ The creature is under your control for 24 hours, after which it stops obeying an
 {V, S}
 {{\color{concentration}Concentration}, up to 1 minute}
 %
-This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing. 
+This spell bestows hope and vitality. Choose any number of creatures within range. For the duration, each target has advantage on Wisdom saving throws and death saving throws, and regains the maximum number of hit points possible from any healing.
+ 
 \spell{Bestow Curse}
 {3rd-level necromancy}
 {{\color{action}1 action}}
@@ -793,10 +809,16 @@ This spell bestows hope and vitality. Choose any number of creatures within rang
 {V, S}
 {{\color{concentration}Concentration}, up to 1 minute}
 You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options:
-\begin{itemize}	\item Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.	\item While cursed, the target has disadvantage on attack rolls against you.	\item While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.	\item While the target is cursed, your attacks and spells deal an extra \dice{1d8} necrotic damage to the target.
-\end{itemize}A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.
+\begin{itemize}
+	\item Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score.
+	\item While cursed, the target has disadvantage on attack rolls against you.
+	\item While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.
+	\item While the target is cursed, your attacks and spells deal an extra \dice{1d8} necrotic damage to the target.
+\end{itemize}
+A remove curse spell ends this effect. At the DM's option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The DM has final say on such a curse's effect.
 
-\impact{At Higher Levels.} If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you usea 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.
+\impact{At Higher Levels.} If you cast this spell using a spell slot of 4th level or higher, the duration is concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the duration is 8 hours. If you use a spell slot of 7th level or higher, the duration is 24 hours. If you use
+a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a duration that doesn't require concentration.
 
 \spell{Blink}
 {3rd-level transmutation}
@@ -893,7 +915,9 @@ You create a 10-foot-radius, 20-foot-tall cylinder of magical energy centered on
 
 Choose one or more of the following types of creatures: celestials, elementals, fey, fiends, or undead. The circle affects a creature of the chosen type in the following ways:
 \begin{itemize}
-	\item The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use tele  portation or interplanar travel to do so, it must first succeed on a Charisma saving throw.	\item The creature has disadvantage on attack rolls against targets within the cylinder.	\item Targets within the cylinder can't be charmed, fright  ened, or possessed by the creature.
+	\item The creature can't willingly enter the cylinder by nonmagical means. If the creature tries to use tele  portation or interplanar travel to do so, it must first succeed on a Charisma saving throw.
+	\item The creature has disadvantage on attack rolls against targets within the cylinder.
+	\item Targets within the cylinder can't be charmed, fright  ened, or possessed by the creature.
 \end{itemize}
 When you cast this spell, you can elect to cause its magic to operate in the reverse direction, preventing a creature of the specified type from leaving the cylinder and protecting targets outside it.
 
